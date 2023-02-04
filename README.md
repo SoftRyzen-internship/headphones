@@ -1,7 +1,6 @@
 # sharp-pages
 
-[макет]
-(https://www.figma.com/file/SL8PoQwUUI6TGdUfTvltTn/Headphones?node-id=149%3A32&t=ocAod5vF8NNk4Cts-0)
+[макет](https://www.figma.com/file/SL8PoQwUUI6TGdUfTvltTn/Headphones?node-id=149%3A32&t=ocAod5vF8NNk4Cts-0)
 
 ## Запуск збірки
 

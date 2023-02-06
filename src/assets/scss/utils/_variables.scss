@@ -3,55 +3,32 @@
 }
 
 :root {
-  --accent-cl: #ff6b08;
-  --secondary-accent-cl: #9f4615;
+  --accent-cl: #FF5BCB;
+  --secondary-accent-cl: #48C8FF;
 
   /* TEXT COLORS */
-  --primary-txt-cl: #0b1d4f;
-  --secondary-txt-cl: #00336a;
-  --white-txt-cl: #ffffff;
-  --white-txt-rgb: #{HexToRGB(#ffffff)};
-  --gray-txt-cl: #adadad;
-  --black-txt-cl: #2b2b2b;
-  --course-txt-cl: #2727bb;
-  --menu-txt-cl: #d6e7ff;
+  --primary-txt-cl: #F5F5F5;
+  --secondary-txt-cl: #D1D1D1;
+  --black-txt-cl: #000000;
+  --primary-txt-rgb: #{HexToRGB(#F5F5F5)};
+  --secondary-txt-rgb: #{HexToRGB(#D1D1D1)};
+  --black-txt-rgb: #{HexToRGB(#000000)};
 
   /* BACKGROUND COLORS */
-  --primary-bg: #f6faff;
-  --primary-bg-rgb: #{HexToRGB(#f6faff)};
-  --secondary-bg: #d9e5ff;
-  --secondary-bg-rgb: #{HexToRGB(#d9e5ff)};
-  --white-bg: #ffffff;
-  --white-bg-rgb: #{HexToRGB(#ffffff)};
-  --blue-bg: #4141e4;
-  --blue-bg-rgb: #{HexToRGB(#4141e4)};
-  --secondary-btn-bg: #017d49;
-  --tabs-checked-bd: #bcd1ef;
-  --gradient-bg: #0b0b4c;
-  --gradient-bg-rgb: #{HexToRGB(#0b0b4c)};
-  --faq-border-bg: #c9e1ff;
+  --primary-bg: #242424;
+  --primary-bg-rgb: #{HexToRGB(#242424)};
+  --normal-gradient-bg: (77.39deg, #48C8FF -19.9%, #FF5BCB 104.31%);
+  --hover-gradient-bg: (74.28deg, #48C8FF 44.69%, #FF5BCB 114.25%);
+  --active-gradient-bg: (74.28deg, #48C8FF -11.75%, #FF5BCB 35.9%);
 
   /* BORDER */
-  --primary-border-color: #d6e7ff;
-  --secondary-border-color: #d9e5ff;
-  --blue-border-color: #7070ff;
-  --before-border-color: #7979ed;
 
   /* SHADOW */
-
-  --secondary-shadow: 0px 100px 80px rgba(38, 37, 66, 0.07),
-    0px 41.7776px 33.4221px rgba(36, 32, 138, 0.0503198),
-    0px 22.3363px 17.869px rgba(36, 32, 138, 0.0417275),
-    0px 12.5216px 10.0172px rgba(36, 32, 138, 0.035),
-    0px 6.6501px 5.32008px rgba(36, 32, 138, 0.0282725),
-    0px 2.76726px 2.21381px rgba(36, 32, 138, 0.0196802);
+  --primary-shadow: 0px -3px 44px rgba(0, 0, 0, 0.25);
 
   /* FONTS */
-  --main-font: 'Lato', sans-serif;
-
-  --grid-item: 1;
-  --grid-mr-left: 30px;
-  --grid-mr-top: 30px;
+  --main-font: 'Poppins', sans-serif;
+  --title-font: 'Prosto one', sans-serif;
 
   /* ANIMATIONS SPEED */
   --fast: 0.2s;

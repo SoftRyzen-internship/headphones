@@ -1,0 +1,51 @@
+.about {
+  background-color: var(--primary-bg);
+}
+
+.about__list {
+  background-image: url(../images/about/mobile/bg@1x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    @include mq(retina) {
+      background-image: url(../images/about/mobile/bg@2x.png);
+      }
+
+  @include mq(tablet) {
+  background-image: url(../images/about/tablet/bg@1x.png);
+    @include mq(retina) {
+      background-image: url(../images/about/tablet/bg@2x.png);
+      }
+  }
+
+  @include mq(desktop) {
+    background-image: url(../images/about/bg@1x.png);
+  }
+    @include mq(retina) {
+      background-image: url(../images/about/bg@2x.png);
+      }
+}
+
+.about__articles {
+  background-image: url(../images/about/mobile/bg-1@1x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    @include mq(retina) {
+      background-image: url(../images/about/mobile/bg-1@2x.png);
+      }
+
+  @include mq(tablet) {
+  background-image: url(../images/about/tablet/bg-1@1x.png);
+    @include mq(retina) {
+      background-image: url(../images/about/tablet/bg-1@2x.png);
+      }
+  }
+
+  @include mq(desktop) {
+    background-image: url(../images/about/bg-1@1x.png);
+  }
+    @include mq(retina) {
+      background-image: url(../images/about/bg-1@2x.png);
+      }
+}

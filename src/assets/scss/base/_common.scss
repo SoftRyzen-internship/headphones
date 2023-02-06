@@ -11,7 +11,7 @@ html {
 body {
   font-family: var(--main-font);
   color: var(--primary-txt-cl);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -24,15 +24,7 @@ h2,
 h3,
 h4,
 p {
-  margin-top: 0;
-}
-
-p {
-  margin-bottom: 20px;
-}
-
-p:last-child {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 img {
@@ -90,38 +82,34 @@ button {
 .section-title {
   margin-bottom: 24px;
 
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.2;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
   text-align: center;
 
-  color: var(--secondary-txt-cl);
+  color: var(--primary-txt-cl);
 
   @include mq(tablet) {
-    margin-bottom: 30px;
-    font-size: 36px;
-  }
-  @include mq(desktop) {
-    margin-bottom: 40px;
-    font-size: 48px;
+    font-size: 32px;
   }
 }
 
 .subtitle {
-  margin-bottom: 24px;
-
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.22;
 
   text-align: center;
 
-  color: var(--secondary-txt-cl);
+  color: var(--primary-txt-cl);
 }
 
 .logo {
+  width: 32px;
+  height: 32px;
+
   @include mq(tablet) {
-    width: 100px;
-    height: 30px;
+    width: 48px;
+    height: 48px;
   }
 }

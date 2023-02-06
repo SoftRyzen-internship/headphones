@@ -4,17 +4,17 @@ import 'slick-carousel';
 window.jQuery = window.$ = $;
 
 $(document).ready(function () {
-  $('.slider-image').slick({
+  $('.buy__slider-image').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
     fade: true,
-    asNavFor: '.slider-nav',
+    asNavFor: '.buy__slider-nav',
   });
-  $('.slider-nav').slick({
+  $('.buy__slider-nav').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    asNavFor: '.slider-image',
+    asNavFor: '.buy__slider-image',
     dots: false,
     arrows: false,
     centerMode: false,

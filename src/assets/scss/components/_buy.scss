@@ -2,18 +2,40 @@
 @import '../vendors/slick-theme';
 
 .buy {
-  background-color: #464141;
-}
-.slick-container {
-  width: 100%;
-}
-.slider-image {
-  position: relative;
-  width: 168px;
-  margin-bottom: 5px;
-}
-.slider-nav {
-  width: 192px;
+  background-color: var(--primary-bg);
+  &__title {
+    font-family: var(--title-font);
+    // font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  &__slick-container {
+    width: 280px;
+    height: 270px;
+  }
+  &__slider-image {
+    position: relative;
+    width: 168px;
+    margin-bottom: 5px;
+  }
+  &__slider-nav {
+    width: 192px;
+    & .slick-slide {
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      border: 1px solid #000;
+      border-radius: 12px;
+
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+    & .slick-current {
+      border-color: #fff;
+    }
+  }
 }
 .slick-prev {
   display: none;
@@ -45,21 +67,5 @@
     width: 24px;
     border-bottom: 1px solid #fff;
     transform: rotate(-45deg);
-  }
-}
-.slider-nav {
-  & .slick-slide {
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    border: 1px solid #000;
-    border-radius: 12px;
-
-    &:not(:last-child) {
-      margin-right: 4px;
-    }
-  }
-  & .slick-current {
-    border-color: #fff;
   }
 }

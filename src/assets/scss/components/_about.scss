@@ -2,7 +2,9 @@
   background-color: var(--primary-bg);
 }
 
-.about__list {
+.about__wrapper {
+  padding-top: 20px;
+  padding-bottom: 24px;
   background-image: url(../images/about/mobile/bg@1x.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -26,6 +28,35 @@
     @include mq(retina) {
       background-image: url(../images/about/bg@2x.png);
       }
+}
+
+
+.about__list {
+
+}
+
+.about__item {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(0, 181, 253);
+}
+
+.about__icon {
+  width: 140px;
+  height: 140px;
+  border: 1px solid rgb(84, 247, 125);
+}
+
+.about__title {
+  font-family: var(--title-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--primary-txt-cl);
+  text-align: center;
 }
 
 .about__articles {
@@ -122,6 +153,11 @@
   }
   }
 
+.about__text__wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
 .about__title {
   font-family: var(--title-font);
   font-style: normal;
@@ -154,12 +190,17 @@ width: 170px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 27px;
+  line-height: 1.5;
   color: var(--primary-txt-cl);
+  text-align: center;
 
   @include mq(tablet) {
     margin-top: 24px;
     font-size: 20px;
   }
+}
+
+.about__text--left {
+text-align: left;
 }
 

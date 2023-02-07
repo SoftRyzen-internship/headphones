@@ -3,32 +3,33 @@
 }
 
 :root {
-  --accent-cl: #FF5BCB;
-  --secondary-accent-cl: #48C8FF;
+  --accent-cl: #ff5bcb;
+  --secondary-accent-cl: #48c8ff;
 
   /* TEXT COLORS */
-  --primary-txt-cl: #F5F5F5;
-  --secondary-txt-cl: #D1D1D1;
+  --primary-txt-cl: #f5f5f5;
+  --secondary-txt-cl: #d1d1d1;
   --black-txt-cl: #000000;
-  --primary-txt-rgb: #{HexToRGB(#F5F5F5)};
-  --secondary-txt-rgb: #{HexToRGB(#D1D1D1)};
+  --primary-txt-rgb: #{HexToRGB(#f5f5f5)};
+  --secondary-txt-rgb: #{HexToRGB(#d1d1d1)};
   --black-txt-rgb: #{HexToRGB(#000000)};
+  --btn-txt-cl: #242424;
 
   /* BACKGROUND COLORS */
   --primary-bg: #242424;
-  --blue-bg:#0077AA;
-  --purple-bg:#CF45B0;
-  --violet-bg: #823FBD;
-  --grey-bg: #938C99;
-  --normal-gradient-bg: (77.39deg, #48C8FF -19.9%, #FF5BCB 104.31%);
-  --hover-gradient-bg: (74.28deg, #48C8FF 44.69%, #FF5BCB 114.25%);
-  --active-gradient-bg: (74.28deg, #48C8FF -11.75%, #FF5BCB 35.9%);
+  --blue-bg: #0077aa;
+  --purple-bg: #cf45b0;
+  --violet-bg: #823fbd;
+  --grey-bg: #938c99;
+  --normal-gradient-bg: linear-gradient(77.39deg, #48c8ff -19.9%, #ff5bcb 104.31%);
+  --hover-gradient-bg: linear-gradient(74.28deg, #48c8ff 44.69%, #ff5bcb 114.25%);
+  --active-gradient-bg: linear-gradient(74.28deg, #48c8ff -11.75%, #ff5bcb 35.9%);
 
   /*HEADPHONES COLORS*/
-  --black-hp:#000000;
-  --violet-hp:#823FBD;
-  --purple-hp: #7A0554;
-  --blue-hp: #14709E;
+  --black-hp: #000000;
+  --violet-hp: #823fbd;
+  --purple-hp: #7a0554;
+  --blue-hp: #14709e;
 
   /* BORDER */
 
@@ -37,7 +38,7 @@
 
   /* FONTS */
   --main-font: 'Poppins', sans-serif;
-  --title-font: 'Prosto one', sans-serif;
+  --title-font: 'ProstoOne', sans-serif;
 
   /* ANIMATIONS SPEED */
   --fast: 0.2s;

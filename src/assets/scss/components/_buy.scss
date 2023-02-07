@@ -1,19 +1,18 @@
-@import '../vendors/slick';
-@import '../vendors/slick-theme';
-
 .buy {
   background-color: var(--primary-bg);
-  // &__title {
-  //   font-family: var(--title-font);
-  //   // font-family: var(--main-font);
-  //   font-weight: 400;
-  //   font-size: 20px;
-  //   line-height: 25px;
-  //   color: var(--primary-txt-cl);
-  // }
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 16px;
+    background-image: url(../images/buy/mobile-section-container-bg@1x.png);
+    background-image: url(../images/buy/mobile-section-container-bg@1x.webp);
+    @include mq(retina) {
+      background-image: url(../images/buy/mobile-section-container-bg@2x.png);
+      background-image: url(../images/buy/mobile-section-container-bg@2x.webp);
+    }
+  }
   &__slick-container {
     width: 272px;
-    // height: 270px;
     margin-bottom: 30px;
     background-image: url(../images/buy/mobile-bg-gradient@1x.png);
     background-image: url(../images/buy/mobile-bg-gradient@1x.webp);
@@ -33,9 +32,43 @@
   }
   &__slider-image {
     position: relative;
-    width: 168px;
-    height: 198px;
-    margin-right: 30px;
+    width: 208px;
+    height: 208px;
+    margin-right: 8px;
+    & .slick-prev {
+      position: absolute;
+      display: none;
+      opacity: 0;
+      pointer-events: none;
+      top: 242px;
+      left: 188px;
+    }
+    & .slick-next {
+      position: absolute;
+      width: 17px;
+      height: 36px;
+      z-index: 1;
+      top: 242px;
+      left: 198px;
+      &:before {
+        content: '';
+        position: absolute;
+        right: -4px;
+        top: 9px;
+        width: 24px;
+        border-bottom: 1px solid var(--primary-txt-cl);
+        transform: rotate(45deg);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 9px;
+        right: -4px;
+        width: 24px;
+        border-bottom: 1px solid var(--primary-txt-cl);
+        transform: rotate(-45deg);
+      }
+    }
   }
 
   &__color-list-item {
@@ -84,11 +117,18 @@
     }
   }
   &__slider-nav {
-    width: 192px;
+    width: 190px;
+    height: 60px;
     margin-left: 20px;
+    & .buy__image {
+      width: 60px;
+      height: 60px;
+    }
+
     & .slick-slide {
       width: 60px;
       height: 60px;
+      position: relative;
       cursor: pointer;
       border: 1px solid #000;
       border-radius: 12px;
@@ -96,41 +136,78 @@
       &:not(:last-child) {
         margin-right: 4px;
       }
-    }
-    & .slick-current {
-      border-color: #fff;
+      &.slick-current {
+        border: none;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 12px;
+          border: 1px solid transparent;
+          background: var(--normal-gradient-bg) border-box;
+          -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: destination-out;
+          mask-composite: exclude;
+        }
+      }
     }
   }
-}
-.slick-prev {
-  display: none;
-  opacity: 0;
-  pointer-events: none;
-}
-.slick-next {
-  position: absolute;
-  width: 17px;
-  height: 36px;
-  z-index: 1;
-  top: 242px;
-  // bottom: 0px;
-  right: -47px;
-  &:before {
-    content: '';
-    position: absolute;
-    right: -4px;
-    top: 9px;
-    width: 24px;
-    border-bottom: 1px solid var(--primary-txt-cl);
-    transform: rotate(45deg);
+  &__features-list {
+    margin-left: 24px;
+    list-style: initial;
+    margin-bottom: 8px;
   }
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 9px;
-    right: -4px;
-    width: 24px;
-    border-bottom: 1px solid var(--primary-txt-cl);
-    transform: rotate(-45deg);
+  &__features-list-text {
+    font-size: 16px;
+  }
+  &__link {
+    font-size: 18px;
+    text-decoration: underline;
+  }
+  &__btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 42px;
+  margin-bottom: 32px;
+  &__old-price {
+    position: relative;
+    font-family: var(--title-font);
+    font-size: 24px;
+    line-height: 1.25;
+    color: var(--black-txt-cl);
+    &:before {
+      content: '';
+      display: block;
+      width: 82px;
+      position: absolute;
+      top: 12px;
+      left: 0;
+
+      border-bottom: 1px solid var(--black-txt-cl);
+      transform: rotate(-21.5deg);
+    }
+  }
+  &__new-price {
+    font-family: var(--title-font);
+    font-size: 40px;
+    line-height: 1.25;
+    background-image: var(--normal-gradient-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
   }
 }

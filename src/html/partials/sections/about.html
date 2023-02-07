@@ -1,4 +1,7 @@
 <section class="section about">
+  <!-- SVG INLINE -->
+  {% include 'components/inline-svg-about.html' %}
+
   <div class="container about__container">
     <div class="about__wrapper">
     <div class="about__text__wrapper">
@@ -10,31 +13,31 @@
       </div>
       <ul class="list about__list">
         <li class="about__item">
-          <!-- <svg class="about__svg">
-              <use href="./assets/images/sprite.svg#icon-circle"></use>
-            </svg> -->
-          <img class="about__icon" src="./assets/images/about/svg/supports.svg" alt="supports" />
+          <svg class="about__icon">
+            <use href="#icon-circle"></use>
+          </svg>
+          <!-- <img class="about__icon" src="./assets/images/about/svg/supports.svg" alt="supports" /> -->
           <p class="about__text">Supports <br /> Spatial Audio</p>
         </li>
         <li class="about__item">
-          <!-- <svg class="about__svg">
-    <use href="./assets/images/sprite.svg#icon-processor"></use>
-  </svg> -->
-          <img class="about__icon" src="./assets/images/about/svg/processor.svg" alt="processor" />
+          <svg class="about__icon">
+            <use href="#processor"></use>
+          </svg>
+          <!-- <img class="about__icon" src="./assets/images/about/svg/processor.svg" alt="processor" /> -->
           <p class="about__text">Apple W1 <br /> Headphone Chip</p>
         </li>
         <li class="about__item">
-          <!-- <svg class="about__svg">
-      <use href="./assets/images/sprite.svg#icon-phone"></use>
-    </svg> -->
-          <img class="about__icon" src="./assets/images/about/svg/lg-optimus-3d.svg" alt="mobile" />
+          <svg class="about__icon">
+            <use href="#phone"></use>
+          </svg>
+          <!-- <img class="about__icon" src="./assets/images/about/svg/lg-optimus-3d.svg" alt="mobile" /> -->
           <p class="about__text">Compatible with <br /> Apple and Android</p>
         </li>
         <li class="about__item">
-          <!-- <svg class="about__svg">
-              <use href="./assets/images/sprite.svg#icon-battery"></use>
-            </svg> -->
-          <img class="about__icon" src="./assets/images/about/svg/battery.svg" alt="battery" />
+          <svg class="about__icon">
+            <use href="#battery"></use>
+          </svg>
+          <!-- <img class="about__icon" src="./assets/images/about/svg/battery.svg" alt="battery" /> -->
           <p class="about__text">Up to 22 hours of <br /> Listening time</з>
         </li>
       </ul>

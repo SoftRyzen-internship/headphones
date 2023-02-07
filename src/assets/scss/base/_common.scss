@@ -80,8 +80,9 @@ button {
 }
 
 .section-title {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 
+  font-family: var(--title-font);
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
@@ -91,6 +92,7 @@ button {
 
   @include mq(tablet) {
     font-size: 32px;
+    margin-bottom: 24px;
   }
 }
 

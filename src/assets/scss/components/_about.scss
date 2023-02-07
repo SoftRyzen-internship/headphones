@@ -16,6 +16,8 @@
       }
 
   @include mq(tablet) {
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-image: url(../images/about/tablet/bg@1x.png);
     @include mq(retina) {
       background-image: url(../images/about/tablet/bg@2x.png);
@@ -32,7 +34,16 @@
 
 
 .about__list {
+  @include mq(tablet) {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mq(desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 
+  }
 }
 
 .about__item {
@@ -41,6 +52,10 @@
   flex-direction: column;
   align-items: center;
   border: 1px solid rgb(0, 181, 253);
+
+  @include mq(tablet) {
+    margin-top: 40px;
+  }
 }
 
 .about__icon {
@@ -201,6 +216,16 @@ width: 170px;
 }
 
 .about__text--left {
-text-align: left;
+@include mq(mobile-only) {
+  text-align: left;
+}
+}
+
+.about__text--subtitle {
+  @include mq(tablet) {
+    margin: 0 auto;
+    margin-top: 24px;
+    width: 480px;
+  }
 }
 

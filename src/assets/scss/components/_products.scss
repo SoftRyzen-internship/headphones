@@ -1,16 +1,26 @@
 .products-wrapper{
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   box-shadow: 0px -3px 44px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
 }
 
 .products__title {
+  @include mq(tablet) {
+    margin-bottom: 40px;
+  }
 }
 
 .products__list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 32px;
+
+  @include mq(tablet) {
+    gap: 40px;
+  }
 }
 
 .list {
@@ -19,6 +29,7 @@
 
 .products__item {
   position: relative;
+  width: 260px;
 
   text-align: center;
   text-transform: capitalize;

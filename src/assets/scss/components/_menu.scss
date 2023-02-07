@@ -1,10 +1,8 @@
 .header__container {
   .nav {
     display: none;
-    @include mq(desktop) {
+    @include mq(tablet) {
       display: block;
-    }
-    @include mq(desktop) {
       margin-left: auto;
     }
   }
@@ -15,15 +13,15 @@
   }
   .nav-item:not(:last-child) {
     margin-right: 20px;
-    @include mq(desktop) {
-      margin-right: 50px;
+    @include mq(tablet) {
+      margin-right: 40px;
     }
   }
   .nav-link {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.25;
     font-family: inherit;
-    color: var(--secondary-txt-cl);
+    color: var(--primary-txt-cl);
 
     transition: color var(--fast) linear;
 

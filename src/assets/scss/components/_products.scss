@@ -2,6 +2,7 @@
   position: relative;
 
   box-shadow: 0px -3px 44px rgba(0, 0, 0, 0.25);
+  background: var(--translucent-bg);
   border-radius: 16px;
 
   @include mq(tablet) {
@@ -33,9 +34,8 @@
 
 .products__title {
   @include mq(mobile-only) {
-    padding-left: 74px;
-    padding-right: 74px;
-    margin-bottom: 32px;
+    width: 126px;
+    margin: 0 auto 32px;
   }
 
   @include mq(tablet-only) {
@@ -156,122 +156,6 @@
 .slick-carousel{
   @include mq(tablet) {
     display: none;
-  }
-}
-
-@include mq(mobile-only) {
-  .products__list{
-
-    .slick-track{
-      display: flex;
-    }
-
-    /* The width of each slide */
-    .slick-slide {
-      width: 100%;
-    }
-
-      .slick-slide:nth-child(1) .products__meta::before{
-        background-color: var(--black-hp);
-      }
-
-      .slick-slide:nth-child(2) .products__meta::before{
-        background-color: var(--violet-hp);
-      }
-
-      .slick-slide:nth-child(3) .products__meta::before{
-        background-color: var(--purple-hp);
-      }
-
-      .slick-slide:nth-child(4) .products__meta::before{
-        background-color: var(--blue-hp);
-      }
-
-    .slick-arrow{
-      position: absolute;
-      top: 50%;
-      z-index: 1000;
-
-      font-size: 0;
-    }
-
-    .slick-arrow.slick-prev{
-      left: 9px;
-      transform: rotate(135deg);
-    }
-
-    .slick-arrow.slick-next{
-      right: 9px;
-      transform: rotate(-45deg);
-    }
-
-    .slick-dots{
-      padding: 0;
-      position: absolute;
-      bottom: -40px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .slick-dots li{
-      list-style: none;
-    }
-
-    .slick-dots button{
-      font-size: 0;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-    }
-
-    .slick-dots{
-      li:nth-child(1) button {
-        background: radial-gradient(circle at center, var(--black-hp) 40%,
-        transparent 40%);
-      }
-      li:nth-child(2) button {
-        background: radial-gradient(circle at center, var(--violet-hp) 40%,
-        transparent 40%);
-      }
-      li:nth-child(3) button {
-        background: radial-gradient(circle at center, var(--purple-hp) 40%,
-        transparent 40%);
-      }
-      li:nth-child(4) button {
-        background: radial-gradient(circle at center, var(--blue-hp) 40%,
-        transparent 40%);
-      }
-    }
-
-    .slick-dots li:nth-child(1).slick-active button{
-      border: 1px solid var(--black-hp);
-    }
-
-    .slick-dots li:nth-child(2).slick-active button{
-      border: 1px solid var(--violet-hp);
-    }
-
-    .slick-dots li:nth-child(3).slick-active button{
-      border: 1px solid var(--purple-hp);
-    }
-
-    .slick-dots li:nth-child(4).slick-active button{
-      border: 1px solid var(--blue-hp);
-    }
-
-    .slick-arrow {
-      width: 24.8px;
-      height: 24.8px;
-      border: solid #F5F5F5;
-      border-width: 0 1px 1px 0;
-      display: inline-block;
-      margin-top: -10px;
-      padding: 3px;
-    }
   }
 }
 

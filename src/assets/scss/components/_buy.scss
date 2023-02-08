@@ -4,25 +4,10 @@
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 16px;
-    background-image: url(../images/buy/mobile-section-container-bg@1x.png);
-    background-image: url(../images/buy/mobile-section-container-bg@1x.webp);
-    @include mq(retina) {
-      background-image: url(../images/buy/mobile-section-container-bg@2x.png);
-      background-image: url(../images/buy/mobile-section-container-bg@2x.webp);
-    }
   }
   &__slick-container {
     width: 272px;
     margin-bottom: 30px;
-    background-image: url(../images/buy/mobile-bg-gradient@1x.png);
-    background-image: url(../images/buy/mobile-bg-gradient@1x.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    @include mq(retina) {
-      background-image: url(../images/buy/mobile-bg-gradient@2x.png);
-      background-image: url(../images/buy/mobile-bg-gradient@2x.webp);
-    }
   }
   &__image-flex-container {
     display: flex;

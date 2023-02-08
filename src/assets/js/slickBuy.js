@@ -16,6 +16,4 @@ $('.buy__slider-nav').slick({
   asNavFor: '.buy__slider-image',
   dots: false,
   arrows: false,
-  centerMode: false,
-  focusOnSelect: true,
 });

@@ -1,5 +1,4 @@
 .buy {
-  background-color: var(--primary-bg);
   &__container {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -10,8 +9,7 @@
   &__slick-container {
     position: relative;
     width: 272px;
-    margin-bottom: 30px;
-    // background-color: var(--normal-gradient-bg);
+    margin-bottom: 32px;
     &:after {
       content: '';
       display: block;
@@ -32,7 +30,6 @@
     margin-bottom: 12px;
   }
   &__slider-image {
-    position: relative;
     width: 208px;
     height: 208px;
     margin-right: 8px;
@@ -168,7 +165,6 @@
   }
   &__link {
     font-size: 18px;
-    text-decoration: underline;
   }
   &__btn {
     margin-left: auto;

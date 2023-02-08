@@ -11,6 +11,7 @@ html {
 body {
   font-family: var(--main-font);
   color: var(--primary-txt-cl);
+  background-color: var(--primary-bg);
   font-size: 18px;
   line-height: 1.5;
 }
@@ -25,6 +26,10 @@ h3,
 h4,
 p {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -107,11 +112,46 @@ button {
 }
 
 .logo {
-  width: 32px;
-  height: 32px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__svg {
+    margin-right: 8px;
+
+    width: 32px;
+    height: 32px;
+  }
+
+  &__icon {
+    fill: red;
+  }
+
+  &__title {
+    font-family: var(--title-font);
+    line-height: 1.25;
+
+    color: var(--primary-txt-cl);
+  }
 
   @include mq(tablet) {
-    width: 48px;
-    height: 48px;
+    &__svg {
+      margin-right: 12px;
+
+      width: 48px;
+      height: 48px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
   }
 }

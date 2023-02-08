@@ -1,55 +1,124 @@
 .buy {
-  &__container {
+  &__section-wrapper {
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     box-shadow: 0px -3px 44px rgba(0, 0, 0, 0.25);
     background: var(--translucent-bg);
     border-radius: 16px;
+    @include mq(tablet) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include mq(desktop) {
+      display: flex;
+    }
+  }
+  &__section-title {
+    @include mq(desktop) {
+      display: none;
+    }
+  }
+  &__content-title {
+    display: none;
+    @include mq(tablet) {
+      display: none;
+    }
+    @include mq(desktop) {
+      display: block;
+      margin-bottom: 24px;
+      font-family: var(--title-font);
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 1.5;
+      color: var(--primary-txt-cl);
+    }
   }
   &__slick-container {
     position: relative;
-    width: 272px;
+    width: 232px;
     margin-bottom: 32px;
+    @include mq(tablet) {
+      margin-left: auto;
+      margin-right: auto;
+      width: 444px;
+      margin-bottom: 40px;
+    }
+    @include mq(desktop) {
+      width: 516px;
+      margin-right: 69px;
+    }
     &:after {
       content: '';
       display: block;
       position: absolute;
       top: 34px;
-      left: 62px;
+      left: 32px;
       width: 148px;
       height: 148px;
       border-radius: 50%;
       filter: blur(50px);
       background: var(--normal-gradient-bg);
+      @include mq(tablet) {
+        top: 60px;
+        left: 40px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        filter: blur(100px);
+      }
     }
   }
+
   &__image-flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 12px;
+    @include mq(tablet) {
+      margin-bottom: 24px;
+    }
   }
   &__slider-image {
     width: 208px;
     height: 208px;
     margin-right: 8px;
     z-index: 1;
-    & .slick-prev {
-      position: absolute;
-      display: none;
-      opacity: 0;
-      pointer-events: none;
-      top: 250px;
-      left: 188px;
+    @include mq(tablet) {
+      width: 420px;
+      height: 420px;
     }
+    @include mq(desktop) {
+      margin-right: 84px;
+    }
+
+    & .slick-prev,
     & .slick-next {
       position: absolute;
       width: 17px;
       height: 36px;
-      color: transparent;
-      z-index: 1;
       top: 232px;
       left: 216px;
+      @include mq(tablet) {
+        top: 492px;
+        left: 420px;
+      }
+      @include mq(desktop) {
+        left: 534px;
+      }
+    }
+    & .slick-prev {
+      display: none;
+      opacity: 0;
+      pointer-events: none;
+    }
+    & .slick-next {
+      position: absolute;
+      color: transparent;
+      z-index: 1;
       &:before {
         content: '';
         position: absolute;
@@ -117,12 +186,17 @@
     }
   }
   &__slider-nav {
-    width: 190px;
+    width: 188px;
     height: 60px;
     margin-left: 20px;
-    & .buy__image {
-      width: 60px;
-      height: 60px;
+    @include mq(tablet) {
+      margin-right: 0;
+      margin-left: 0;
+      width: 388px;
+      height: 124px;
+    }
+    @include mq(desktop) {
+      width: 516px;
     }
 
     & .slick-slide {
@@ -132,9 +206,15 @@
       cursor: pointer;
       border: 1px solid #000;
       border-radius: 12px;
-
+      @include mq(tablet) {
+        width: 124px;
+        height: 124px;
+      }
       &:not(:last-child) {
         margin-right: 4px;
+        @include mq(tablet) {
+          margin-right: 8px;
+        }
       }
       &.slick-current {
         border: none;
@@ -159,16 +239,40 @@
     margin-left: 24px;
     list-style: initial;
     margin-bottom: 8px;
+    @include mq(tablet) {
+      margin-bottom: 16px;
+    }
   }
   &__features-list-text {
     font-size: 16px;
+    @include mq(tablet) {
+      font-size: 20px;
+    }
   }
   &__link {
     font-size: 18px;
+    color: var(--primary-txt-cl);
+    text-decoration: underline;
+  }
+  &__price-flex-container {
+    margin-top: 32px;
+    @include mq(tablet) {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include mq(desktop) {
+      margin-top: 23px;
+    }
   }
   &__btn {
+    margin-top: 32px;
     margin-left: auto;
     margin-right: auto;
+    @include mq(tablet) {
+      margin: 0;
+    }
   }
 }
 
@@ -176,8 +280,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 42px;
-  margin-bottom: 32px;
+  width: 213px;
   &__old-price {
     position: relative;
     font-family: var(--title-font);

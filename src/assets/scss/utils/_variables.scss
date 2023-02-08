@@ -17,13 +17,16 @@
 
   /* BACKGROUND COLORS */
   --primary-bg: #242424;
-  --blue-bg: #0077aa;
-  --purple-bg: #cf45b0;
-  --violet-bg: #823fbd;
-  --grey-bg: #938c99;
-  --normal-gradient-bg: linear-gradient(77.39deg, #48c8ff -19.9%, #ff5bcb 104.31%);
-  --hover-gradient-bg: linear-gradient(74.28deg, #48c8ff 44.69%, #ff5bcb 114.25%);
-  --active-gradient-bg: linear-gradient(74.28deg, #48c8ff -11.75%, #ff5bcb 35.9%);
+
+  --translucent-bg: rgba(36, 36, 36, 0.4);
+  --blue-bg:#0077AA;
+  --purple-bg:#CF45B0;
+  --violet-bg: #823FBD;
+  --grey-bg: #938C99;
+  --normal-gradient-bg: linear-gradient(77.39deg, #48C8FF -19.9%, #FF5BCB 104.31%);
+  --hover-gradient-bg: linear-gradient(74.28deg, #48C8FF 44.69%, #FF5BCB 114.25%);
+  --active-gradient-bg: linear-gradient(74.28deg, #48C8FF -11.75%, #FF5BCB 35.9%);
+
   --translucent-bg: rgba(36, 36, 36, 0.4);
 
   /*HEADPHONES COLORS*/

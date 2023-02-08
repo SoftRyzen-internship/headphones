@@ -20,9 +20,10 @@
   --purple-bg:#CF45B0;
   --violet-bg: #823FBD;
   --grey-bg: #938C99;
-  --normal-gradient-bg: (77.39deg, #48C8FF -19.9%, #FF5BCB 104.31%);
-  --hover-gradient-bg: (74.28deg, #48C8FF 44.69%, #FF5BCB 114.25%);
-  --active-gradient-bg: (74.28deg, #48C8FF -11.75%, #FF5BCB 35.9%);
+  --normal-gradient-bg: linear-gradient(77.39deg, #48C8FF -19.9%, #FF5BCB 104.31%);
+  --hover-gradient-bg: linear-gradient(74.28deg, #48C8FF 44.69%, #FF5BCB 114.25%);
+  --active-gradient-bg: linear-gradient(74.28deg, #48C8FF -11.75%, #FF5BCB 35.9%);
+  --translucent-bg: rgba(36, 36, 36, 0.4);
 
   /*HEADPHONES COLORS*/
   --black-hp:#000000;
@@ -37,7 +38,7 @@
 
   /* FONTS */
   --main-font: 'Poppins', sans-serif;
-  --title-font: 'Prosto one', sans-serif;
+  --title-font: 'ProstoOne', sans-serif;
 
   /* ANIMATIONS SPEED */
   --fast: 0.2s;

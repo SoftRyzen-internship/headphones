@@ -13,22 +13,22 @@
   --primary-txt-rgb: #{HexToRGB(#f5f5f5)};
   --secondary-txt-rgb: #{HexToRGB(#d1d1d1)};
   --black-txt-rgb: #{HexToRGB(#000000)};
+  --btn-txt-cl: #242424;
 
   /* BACKGROUND COLORS */
   --primary-bg: #242424;
   --blue-bg: #0077aa;
   --purple-bg: #cf45b0;
+  --pink-bg: #7a0554;
   --violet-bg: #823fbd;
   --grey-bg: #938c99;
+  --hero-img-bg: linear-gradient(74.52deg, #0077aa 5.65%, #ff4488 113.53%);
   --normal-gradient-bg: linear-gradient(77.39deg, #48c8ff -19.9%, #ff5bcb 104.31%);
   --hover-gradient-bg: linear-gradient(74.28deg, #48c8ff 44.69%, #ff5bcb 114.25%);
   --active-gradient-bg: linear-gradient(74.28deg, #48c8ff -11.75%, #ff5bcb 35.9%);
-  --hero-img-bg: linear-gradient(74.52deg, #0077aa 5.65%, #ff4488 113.53%);
   --hero-img-blur: blur(100px);
-  --dot-blue: #14709e;
-  --dot-pink: #7a0554;
-  --dot-black: #000;
-  --dot-violet: #823fbd;
+
+  --translucent-bg: rgba(36, 36, 36, 0.4);
 
   /*HEADPHONES COLORS*/
   --black-hp: #000000;

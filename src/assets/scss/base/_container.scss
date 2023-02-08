@@ -5,6 +5,7 @@
   margin-right: auto;
   margin-left: auto;
 
+
   @include mq(mobile) {
     max-width: 320px;
     margin-right: auto;

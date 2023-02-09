@@ -38,21 +38,6 @@
       color: var(--primary-txt-cl);
     }
   }
-  // &__content-title {
-  //   display: none;
-  //   @include mq(tablet) {
-  //     display: none;
-  //   }
-  //   @include mq(desktop) {
-  //     display: block;
-  //     margin-bottom: 24px;
-  //     font-family: var(--title-font);
-  //     font-weight: 400;
-  //     font-size: 32px;
-  //     line-height: 1.5;
-  //     color: var(--primary-txt-cl);
-  //   }
-  // }
   &__slick-container {
     position: relative;
     width: 232px;

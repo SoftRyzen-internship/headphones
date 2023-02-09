@@ -1,5 +1,15 @@
 @include mq(mobile-only) {
+  .products {
+    .slick-slider{
+      position: static;
+    }
+  }
+
   .products__list{
+
+    .slick-list{
+      overflow: visible;
+    }
 
     .slick-track{
       display: flex;
@@ -11,19 +21,19 @@
     }
 
       .slick-slide:nth-child(1) .products__meta::before{
-        background-color: var(--black-hp);
+        background-color: var(--blue-hp);
       }
 
       .slick-slide:nth-child(2) .products__meta::before{
-        background-color: var(--violet-hp);
-      }
-
-      .slick-slide:nth-child(3) .products__meta::before{
         background-color: var(--purple-hp);
       }
 
+      .slick-slide:nth-child(3) .products__meta::before{
+        background-color: var(--black-hp)
+      }
+
       .slick-slide:nth-child(4) .products__meta::before{
-        background-color: var(--blue-hp);
+        background-color: var(--violet-hp);
       }
 
     .slick-arrow{
@@ -53,7 +63,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 12px;
+      gap: 4px;
     }
 
     .slick-dots li{
@@ -68,37 +78,37 @@
     }
 
     .slick-dots{
-      li:nth-child(1) button {
+      li:nth-child(3) button {
         background: radial-gradient(circle at center, var(--black-hp) 40%,
         transparent 40%);
       }
-      li:nth-child(2) button {
+      li:nth-child(4) button {
         background: radial-gradient(circle at center, var(--violet-hp) 40%,
         transparent 40%);
       }
-      li:nth-child(3) button {
+      li:nth-child(2) button {
         background: radial-gradient(circle at center, var(--purple-hp) 40%,
         transparent 40%);
       }
-      li:nth-child(4) button {
+      li:nth-child(1) button {
         background: radial-gradient(circle at center, var(--blue-hp) 40%,
         transparent 40%);
       }
     }
 
-    .slick-dots li:nth-child(1).slick-active button{
+    .slick-dots li:nth-child(3).slick-active button{
       border: 1px solid var(--black-hp);
     }
 
-    .slick-dots li:nth-child(2).slick-active button{
+    .slick-dots li:nth-child(4).slick-active button{
       border: 1px solid var(--violet-hp);
     }
 
-    .slick-dots li:nth-child(3).slick-active button{
+    .slick-dots li:nth-child(2).slick-active button{
       border: 1px solid var(--purple-hp);
     }
 
-    .slick-dots li:nth-child(4).slick-active button{
+    .slick-dots li:nth-child(1).slick-active button{
       border: 1px solid var(--blue-hp);
     }
 

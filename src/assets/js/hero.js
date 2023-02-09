@@ -5,7 +5,10 @@ const refs = {
 };
 
 let existingImg = refs.img[0];
-let exitingItem = refs.items[1];
+let exitingItem = refs.items[0];
+
+console.log(existingImg);
+console.log(exitingItem);
 
 const handleClick = e => {
   const { img } = refs;
@@ -21,21 +24,22 @@ const handleClick = e => {
       }
 
       existingImg.classList.add('visually-hidden');
-      img[1].classList.remove('visually-hidden');
-      existingImg = img[1];
+      img[0].classList.remove('visually-hidden');
+      existingImg = img[0];
 
       break;
 
     case 'pink':
       if (!e.target.classList.contains('hero__slider-item-active')) {
+        e.target.style.setProperty('--border', '1px solid #7a0554');
         e.target.classList.add('hero__slider-item-active');
         exitingItem.classList.remove('hero__slider-item-active');
         exitingItem = e.target;
       }
 
       existingImg.classList.add('visually-hidden');
-      img[0].classList.remove('visually-hidden');
-      existingImg = img[0];
+      img[1].classList.remove('visually-hidden');
+      existingImg = img[1];
 
       break;
 

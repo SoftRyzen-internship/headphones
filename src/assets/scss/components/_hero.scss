@@ -58,6 +58,7 @@
   &__img {
     position: relative;
     z-index: 1;
+    filter: var(--img-shadow);
   }
 
   &__slider-list {

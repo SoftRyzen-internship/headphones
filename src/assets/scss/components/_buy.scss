@@ -11,16 +11,18 @@
     border-radius: 16px;
     @include mq(tablet) {
       padding-top: 40px;
-      padding-bottom: 40px;
+      padding-bottom: 97px;
       padding-left: 40px;
       padding-right: 40px;
     }
     @include mq(desktop) {
+      padding-bottom: 40px;
       display: flex;
     }
   }
   &__section-title {
     @include mq(tablet) {
+      line-height: 1.25;
       margin-bottom: 20px;
     }
     @include mq(desktop) {
@@ -90,9 +92,6 @@
   }
 
   &__content-container {
-    @include mq(tablet) {
-      margin-bottom: 40px;
-    }
     @include mq(desktop) {
       margin-top: 64px;
     }
@@ -279,6 +278,9 @@
     font-size: 18px;
     color: var(--primary-txt-cl);
     text-decoration: underline;
+    @include mq(tablet) {
+      font-size: 20px;
+    }
   }
   &__price-flex-container {
     margin-top: 32px;

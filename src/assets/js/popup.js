@@ -1,13 +1,13 @@
 import $ from 'jquery';
 
 $(document).ready(function () {
-  const openModalBtn = document.querySelectorAll('.buy__btn');
-  const modal = document.querySelector('[data-modal]');
-  const closeModalBtn = document.querySelector('[data-modal-close]');
+  const openPopupBtn = document.querySelectorAll('.send__btn');
+  const popup = document.querySelector('[data-popup]');
+  const closePopupBtn = document.querySelector('[data-popup-close]');
   const body = document.querySelector('body');
   const backdrop = document.querySelector('.backdrop');
 
-  openModalBtn.forEach(function (btn) {
+  openPopupBtn.forEach(function (btn) {
     btn.addEventListener('click', e => {
       e.preventDefault();
       setTimeout(() => {
@@ -17,12 +17,12 @@ $(document).ready(function () {
   });
 
   function toggleModal() {
-    modal.classList.toggle('is-hidden');
+    popup.classList.toggle('is-hidden');
     body.classList.toggle('scroll-hidden');
   }
 
   function handleKey(e) {
-    if (!modal.classList.contains('is-hidden')) {
+    if (!popup.classList.contains('is-hidden')) {
       if (e.key === 'Escape') {
         toggleModal();
       }
@@ -39,5 +39,5 @@ $(document).ready(function () {
 
   document.addEventListener('keydown', handleKey);
   backdrop.addEventListener('mousedown', handleClose);
-  closeModalBtn.addEventListener('click', toggleModal);
+  closePopupBtn.addEventListener('click', toggleModal);
 });

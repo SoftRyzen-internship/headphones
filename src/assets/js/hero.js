@@ -77,3 +77,17 @@ const handleClick = e => {
 };
 
 refs.list.addEventListener('click', handleClick);
+
+// import $ from "jquery";
+// import 'slick-carousel';
+
+// $('.hero-carousel').slick({
+//   infinite: true,
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   dots: true,
+//   fade: true,
+//   cssEase: 'linear',
+//   speed: 500,
+//   variableWidth: true,
+// });

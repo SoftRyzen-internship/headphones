@@ -1,6 +1,8 @@
 .hero {
   position: relative;
 
+  padding: 24px 0 40px;
+
   background-color: var(--primary-bg);
 
   &__container {
@@ -39,6 +41,9 @@
     position: relative;
     pointer-events: none;
 
+    margin: 0 0 5px;
+    padding: 0;
+
     &::after {
       content: '';
 
@@ -59,12 +64,16 @@
     position: relative;
     z-index: 1;
     filter: var(--img-shadow);
+
+    @media (width < 768px) {
+      height: 217px;
+    }
   }
 
   &__slider-list {
     display: flex;
     padding: 0;
-    margin: 0 0 24px;
+    margin: 0 0 17px;
   }
 
   &__slider-item {
@@ -145,16 +154,6 @@
     margin-right: auto;
     padding: 16px 73px;
 
-    background: var(--normal-gradient-bg);
-    border-radius: 30px;
-
-    font-family: var(--main-font);
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.5;
-
-    color: var(--primary-bg);
-
     @media (width < 768px) {
       margin-bottom: 20px;
     }
@@ -180,6 +179,8 @@
   }
 
   @include mq(tablet) {
+    padding: 50px 0;
+
     &__title {
       margin-bottom: 20px;
 
@@ -187,8 +188,12 @@
       line-height: 1.23;
     }
 
+    &__img-wrapper {
+      margin: 0 0 15px;
+    }
+
     &__slider-list {
-      margin: 0 0 44px;
+      margin: 0 0 37px;
     }
 
     &__subtitle {
@@ -213,14 +218,20 @@
   }
 
   @include mq(desktop) {
+    padding: 40px 0 100px;
+
     &__container {
-      display: flex;
-      align-items: center;
       flex-flow: row-reverse;
     }
 
     &__title {
       display: none;
+      margin-bottom: 34px;
+      margin-left: -13px;
+    }
+
+    &__img-wrapper {
+      margin: 0;
     }
 
     &__img {
@@ -229,9 +240,23 @@
 
     &__slider-list {
       position: absolute;
-      top: 90%;
+      bottom: -4px;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+
+    &__subtitle {
+      text-align: start;
+    }
+    
+    &__subsubtitle {
+      margin-left: 0;
+      margin-bottom: 60px;
+    }
+
+    &__btn {
+      margin-left: -2px;
+      margin-bottom: 24px;
     }
 
     &__desktop-title {

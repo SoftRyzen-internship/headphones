@@ -18,9 +18,10 @@ $('.buy__slider-nav').slick({
   dots: false,
   arrows: false,
   focusOnSelect: true,
+  variableWidth: true,
   responsive: [
     {
-      breakpoint: 1444,
+      breakpoint: 1439,
       settings: {
         slidesToShow: 4,
       },
@@ -28,37 +29,38 @@ $('.buy__slider-nav').slick({
   ],
 });
 
+const colorBtnList = document.querySelector('.buy__color-list');
 const buttons = document.querySelectorAll('button[data-color]');
 const images = document.querySelectorAll('.buy__image');
 const sources = document.querySelectorAll('.buy__slick-container source ');
 
-buttons.forEach(button => {
-  button.addEventListener('click', event => {
-    let oldColor = '';
-    if (button.classList.contains('current')) {
-      return;
-    } else {
-      buttons.forEach(button => {
-        if (button.classList.contains('current')) {
-          button.classList.remove('current');
-          oldColor = button.dataset.color;
-        }
-      });
-      event.target.classList.add('current');
-      const clickedColor = event.target.dataset.color;
+const replacePartOfString = (string, searchStr, replaceStr) =>
+  string.split(searchStr).join(replaceStr);
 
-      sources.forEach(source => {
-        source.srcset = replaceAll(source.srcset, oldColor, clickedColor);
-      });
-
-      images.forEach(img => {
-        img.src = replaceAll(img.src, oldColor, clickedColor);
-      });
-      $('.buy__slider-nav').slick('refresh');
-    }
+const replaceImgPath = (elemList, replaceAttr, searchStr, replaceStr) => {
+  elemList.forEach(item => {
+    item[replaceAttr] = replacePartOfString(item[replaceAttr], searchStr, replaceStr);
   });
-});
+};
 
-function replaceAll(string, search, replace) {
-  return string.split(search).join(replace);
-}
+const colorClickHandler = e => {
+  const clickedButton = e.target;
+  if (clickedButton.classList.contains('current')) {
+    return;
+  } else {
+    const clickedColor = e.target.dataset.color;
+    let oldColor = '';
+    buttons.forEach(button => {
+      if (button.classList.contains('current')) {
+        button.classList.remove('current');
+        oldColor = button.dataset.color;
+      }
+    });
+    clickedButton.classList.add('current');
+
+    replaceImgPath(sources, 'srcset', oldColor, clickedColor);
+    replaceImgPath(images, 'src', oldColor, clickedColor);
+  }
+};
+
+colorBtnList.addEventListener('click', colorClickHandler);

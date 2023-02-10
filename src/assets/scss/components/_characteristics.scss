@@ -1,6 +1,8 @@
 .characteristics {
   background-color: var(--primary-bg);
-  padding-bottom: 184px;
+  @include mq(mobile-only) {
+    padding-bottom: 184px;
+  }
   @include mq(mobile) {
     background-image: url('../images/characteristics/mobile/elipse-right-top.svg'),
       url('../images/characteristics/mobile/elipse-left-bottom.svg'),

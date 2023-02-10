@@ -1,0 +1,404 @@
+.characteristics {
+  background-color: var(--primary-bg);
+  @include mq(mobile-only) {
+    padding-bottom: 184px;
+  }
+  @include mq(mobile) {
+    background-image: url('../images/characteristics/mobile/elipse-right-top.svg'),
+      url('../images/characteristics/mobile/elipse-left-bottom.svg'),
+      url('../images/characteristics/mobile/bg-mobile.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 200px 423px, -125px 567px, -282px 631px;
+    background-size: 345px 483px, 345px 483px, 1070px 314px;
+  }
+  @include mq(tablet) {
+    background-image: url('../images/characteristics/ellipse.svg'),
+      url('../images/characteristics/ellipse.svg'),
+      url('../images/characteristics/characteristics-bg.png'),
+      url('../images/characteristics/characteristics-bg-desktop.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: -10px 132px, -330px 692px, -77px 145px, -652px 705px;
+    background-size: 979px auto, 979px auto, 1440px auto, 2053px auto;
+    @include mq(retina) {
+      background-image: url('../images/characteristics/ellipse.svg'),
+        url('../images/characteristics/ellipse.svg'),
+        url('../images/characteristics/characteristics-bg@2x.png'),
+        url('../images/characteristics/characteristics-bg-desktop@2x.png');
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+      background-position: -10px 132px, -330px 692px, -77px 145px, -652px 705px;
+      background-size: 979px auto, 979px auto, 1440px auto, 2053px auto;
+    }
+  }
+  @include mq(desktop) {
+    background-image: url('../images/characteristics/ellipse.svg'),
+      url('../images/characteristics/characteristics-bg-desktop.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50%, 0px 145px;
+    background-size: auto auto, 2053px auto;
+    @include mq(retina) {
+      background-image: url('../images/characteristics/ellipse.svg'),
+        url('../images/characteristics/characteristics-bg-desktop@2x.png');
+      background-repeat: no-repeat, no-repeat;
+      background-position: 50%, 0px 145px;
+      background-size: auto auto, 2053px auto;
+    }
+  }
+
+  &__container {
+    @include mq(tablet) {
+      padding-left: 39px;
+    }
+    @include mq(desktop) {
+      display: flex;
+      padding-left: 112px;
+      padding-right: 112px;
+    }
+  }
+
+  &__block {
+    @include mq(tablet) {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  &__title {
+    font-family: var(--title-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--secondary-accent-cl);
+    text-align: center;
+    margin-bottom: 16px;
+    @include mq(tablet) {
+      text-align: left;
+    }
+    @include mq(tablet) {
+      font-size: 32px;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include mq(tablet) {
+      padding-right: 4px;
+      padding-left: 12px;
+    }
+  }
+
+  &__item {
+    font-size: 18px;
+    line-height: 1.5;
+    &:before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--primary-txt-cl);
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0px 10px 0px 0px;
+    }
+    @include mq(tablet) {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 0px;
+    }
+  }
+  &__item-span {
+    margin-left: 15px;
+  }
+  &__item-span-second {
+    margin-left: 15px;
+    @include mq(tablet) {
+      margin-left: 0px;
+    }
+  }
+}
+.container {
+}
+.item {
+}
+.characteristics-device-one {
+  margin-bottom: 180px;
+  position: relative;
+  @include mq(tablet) {
+    margin-bottom: 0px;
+    display: inline-block;
+    margin-top: 12px;
+  }
+  &__image {
+    img {
+      width: 132px;
+      height: 290px;
+    }
+    @include mq(tablet) {
+      img {
+        width: 283px;
+        height: 560px;
+      }
+    }
+  }
+
+  &__body {
+  }
+}
+.device-control {
+  width: 220px;
+  height: 180px;
+  border-left: 1px solid;
+  position: relative;
+  position: absolute;
+  padding-left: 8px;
+  padding-top: 47px;
+  top: 249px;
+  left: 52px;
+  ::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-txt-cl);
+    position: absolute;
+    top: -2px;
+    left: -3.5px;
+    @include mq(tablet) {
+      display: none;
+    }
+  }
+  @include mq(tablet) {
+    width: 339px;
+    top: 379px;
+    left: -220px;
+    border-left: none;
+  }
+  &__panel {
+    @include mq(tablet) {
+      border-bottom: 1px solid;
+      margin-bottom: 0px;
+      position: relative;
+
+      ::after {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--primary-txt-cl);
+        position: absolute;
+        bottom: -3.5px;
+        right: -3.5px;
+      }
+    }
+  }
+
+  &__body {
+    @include mq(tablet) {
+      margin-top: 11px;
+      padding-right: 40px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+.control-panel {
+  margin-bottom: 8px;
+  @include mq(tablet) {
+    margin-bottom: 0px;
+  }
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+      @include mq(tablet) {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__svg {
+  }
+}
+.line-volume {
+  display: block;
+  border: none;
+  height: 1px;
+  margin-right: 10px;
+  width: 75%;
+  background-color: var(--primary-txt-cl);
+  text-align: left;
+  margin-left: 0;
+  @include mq(tablet) {
+    margin-right: 16px;
+    width: 72%;
+  }
+}
+
+.line-volume::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-txt-cl);
+  position: absolute;
+  top: 9px;
+  left: -3px;
+}
+.device-volume {
+  position: absolute;
+  top: 218px;
+  left: 65px;
+  @include mq(tablet) {
+    top: 409px;
+    left: 116px;
+  }
+  &__plus {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    width: 145px;
+    margin-bottom: 20px;
+    @include mq(tablet) {
+      margin-bottom: 49px;
+      width: 222px;
+    }
+  }
+
+  &__svg {
+  }
+
+  &__minus {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    width: 145px;
+    @include mq(tablet) {
+      width: 222px;
+    }
+  }
+}
+.characteristics-device-two {
+  position: relative;
+
+  &__image {
+    img {
+      margin: 0 auto;
+    }
+    @include mq(tablet) {
+      img {
+        margin: 0 45px;
+      }
+    }
+    @include mq(desktop) {
+      img {
+        margin: 12px 30px;
+      }
+    }
+  }
+}
+.device-two-mobile {
+  @include mq(tablet) {
+    display: none;
+  }
+}
+.device-two-tablet {
+  @include mq(mobile-only) {
+    display: none;
+  }
+}
+.device-two-battery {
+  width: 137px;
+  height: 85px;
+  border-left: 1px solid;
+  position: relative;
+  position: absolute;
+  padding-left: 10px;
+  padding-top: 38px;
+  top: 198px;
+  left: 111px;
+  ::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-txt-cl);
+    position: absolute;
+    top: -2px;
+    left: -3.5px;
+  }
+  @include mq(tablet) {
+    width: 137px;
+    height: 110px;
+    border-left: 1px solid;
+    padding-left: 12px;
+    padding-top: 63px;
+    top: 424px;
+    left: 306px;
+  }
+  @include mq(desktop) {
+    top: 440px;
+    left: 294px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+.device-two-headphone {
+  width: 223px;
+  height: 295px;
+  border-left: 1px solid;
+  position: relative;
+  position: absolute;
+  padding-left: 8px;
+  padding-top: 222px;
+  top: 85px;
+  left: 52px;
+  ::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-txt-cl);
+    position: absolute;
+    top: -2px;
+    left: -3.5px;
+    @include mq(tablet) {
+      top: 188px;
+    }
+  }
+  @include mq(tablet) {
+    width: 223px;
+    height: 192px;
+    border-left: 1px solid;
+    padding-left: 11px;
+    padding-top: 4px;
+    top: 31px;
+    left: 411px;
+  }
+  @include mq(desktop) {
+    top: 47px;
+    left: 399px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}

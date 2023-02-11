@@ -5,26 +5,32 @@
         <use href="./assets/images/sprite.svg#icon-close"></use>
       </svg>
       <div class="modal-content">
-        <form class="contact-form" action="#">
+        <form class="contact-form" action="#" id="form">
           <h2 class="section-title modal__title">We will call you back</h2>
 
-          <input
-            class="contact-form-input"
-            id="name"
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-          />
+          <div class="form-control">
+            <input
+              class="contact-form-input"
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <span>Error message</span>
+          </div>
 
-          <input
-            class="contact-form-input"
-            id="phone"
-            type="tel"
-            name="phone"
-            placeholder="Your Phone"
-            required
-          />
+          <div class="form-control">
+            <input
+              class="contact-form-input"
+              id="telephone"
+              type="tel"
+              name="telephone"
+              placeholder="Your Phone"
+              required
+            />
+            <span>Error message</span>
+          </div>
 
           <button class="send__btn btn" type="submit">Send</button>
         </form>

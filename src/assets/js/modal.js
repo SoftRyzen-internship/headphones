@@ -6,10 +6,23 @@ $(document).ready(function () {
   const closeModalBtn = document.querySelector('[data-modal-close]');
   const body = document.querySelector('body');
   const backdrop = document.querySelector('.backdrop');
+  const sendBtn = document.querySelector('.send__btn');
+
+  const form = document.getElementById('form');
+  const username = document.getElementById('name');
+  const phone = document.getElementById('telephone');
 
   openModalBtn.forEach(function (btn) {
     btn.addEventListener('click', e => {
       e.preventDefault();
+
+      //remove values in form
+      form[0].value = '';
+      form[1].value = '+';
+      //remove success class
+      username.parentElement.classList.remove('success');
+      phone.parentElement.classList.remove('success');
+
       setTimeout(() => {
         toggleModal();
       }, 500);
@@ -40,4 +53,5 @@ $(document).ready(function () {
   document.addEventListener('keydown', handleKey);
   backdrop.addEventListener('mousedown', handleClose);
   closeModalBtn.addEventListener('click', toggleModal);
+  sendBtn.addEventListener('click', toggleModal);
 });

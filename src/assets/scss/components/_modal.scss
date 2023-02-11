@@ -149,3 +149,28 @@
     right: 24px;
     }
 }
+
+// FORM VALIDATION
+.form-control span {
+  visibility: hidden;
+}
+
+.form-control.error span {
+  visibility: visible;
+  display: block;
+  width: 232px;
+  padding-left: 25px;
+  color: #DC2626;
+
+  @include mq(tablet) {
+      width: 367px;
+    }
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #DC2626;
+}

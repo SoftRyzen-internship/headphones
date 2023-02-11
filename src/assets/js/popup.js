@@ -5,7 +5,7 @@ $(document).ready(function () {
   const popup = document.querySelector('[data-popup]');
   const closePopupBtn = document.querySelector('[data-popup-close]');
   const body = document.querySelector('body');
-  const backdrop = document.querySelector('.backdrop');
+  const backdrop = document.querySelector('.backdrop-popup');
 
   openPopupBtn.forEach(function (btn) {
     btn.addEventListener('click', e => {

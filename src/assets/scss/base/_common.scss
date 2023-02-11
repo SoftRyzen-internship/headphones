@@ -28,11 +28,6 @@ p {
   margin: 0;
 }
 
-ul,
-ol {
-  list-style: none;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -113,12 +108,6 @@ button {
 }
 
 .logo {
-  transition: all 0.2s ease-in-out;
-
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-  }
 
   &:hover &__title,
   &:focus &__title {

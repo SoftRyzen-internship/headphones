@@ -7,9 +7,6 @@ const refs = {
 let existingImg = refs.img[0];
 let exitingItem = refs.items[0];
 
-console.log(existingImg);
-console.log(exitingItem);
-
 const handleClick = e => {
   const { img } = refs;
   const expr = e.target.getAttribute('data-action');

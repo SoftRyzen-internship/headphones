@@ -7,3 +7,11 @@
     padding-bottom: 50px;
   }
 }
+
+.section:last-child{
+  padding-bottom: 80px;
+
+  @include mq(tablet) {
+    padding-bottom: 100px;
+  }
+}

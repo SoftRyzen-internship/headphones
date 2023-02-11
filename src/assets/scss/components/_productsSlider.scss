@@ -1,4 +1,8 @@
 @include mq(mobile-only) {
+  .products-section{
+    padding-bottom: 80px;
+  }
+
   .products {
     .slick-slider{
       position: static;

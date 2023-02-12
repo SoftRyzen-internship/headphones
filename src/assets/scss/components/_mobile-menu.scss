@@ -65,6 +65,25 @@
     font-family: inherit;
     color: var(--menu-txt-cl);
 
-    transition: color var(--fast) linear;
+    transition: background var(--fast) linear;
+
+    &:hover,
+    &:focus {
+      background: var(--hover-gradient-bg);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+
+    &:active {
+      background: var(--active-gradient-bg);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
   }
 }

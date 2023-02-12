@@ -55,15 +55,15 @@
       display: block;
       position: absolute;
       top: 34px;
-      left: 32px;
+      left: 27px;
       width: 148px;
       height: 148px;
       border-radius: 50%;
       filter: blur(50px);
-      background: var(--normal-gradient-bg);
+      background: var(--hero-img-bg);
       @include mq(tablet) {
         top: 60px;
-        left: 40px;
+        left: 60px;
         width: 300px;
         height: 300px;
         border-radius: 50%;

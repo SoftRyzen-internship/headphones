@@ -196,7 +196,8 @@
       margin-right: 16px;
     }
     &:hover,
-    &:focus {
+    &:focus,
+    &:focus-within {
       transform: scale(1.2);
     }
   }
@@ -205,7 +206,7 @@
     font-size: 32px;
     text-decoration: none;
     transition: all var(--fast) ease-in-out;
-    transform: scale(1);
+    // transform: scale(1);
     /* Create the gradient. */
     background-image: var(--normal-gradient-bg);
     /* Set the background size and repeat properties. */

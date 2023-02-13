@@ -5,6 +5,11 @@
 
   background-color: var(--primary-bg);
 
+  ul,
+  ol {
+    list-style: none;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -24,6 +29,7 @@
     font-size: 36px;
     line-height: 1.22;
     text-align: center;
+    font-weight: 400;
 
     background-clip: text;
     background: var(--normal-gradient-bg);
@@ -48,15 +54,27 @@
       content: '';
 
       position: absolute;
-      top: 0;
+      top: 31.3px;
+      right: 43.7px;
 
       display: block;
-      width: 100%;
-      height: 100%;
+      width: 187px;
+      height: 187px;
+
       border-radius: 50%;
+      filter: blur(41.3662px);
 
       background: var(--hero-img-bg);
-      filter: var(--hero-img-blur);
+
+      @include mq(tablet) {
+        top: 75px;
+        right: 106px;
+
+        width: 452px;
+        height: 452px;
+
+        filter: var(--hero-img-blur);
+      }
     }
   }
 
@@ -134,6 +152,7 @@
     text-align: center;
     font-size: 20px;
     line-height: 1.25;
+    font-weight: 400;
 
     color: var(--title-font);
 
@@ -148,11 +167,8 @@
   }
 
   &__btn {
-    display: block;
-
     margin-left: auto;
     margin-right: auto;
-    padding: 16px 73px;
 
     @media (width < 768px) {
       margin-bottom: 20px;
@@ -166,6 +182,7 @@
     font-size: 18px;
     line-height: 1.22;
     text-align: center;
+    font-weight: 400;
 
     color: var(--main-font);
 
@@ -200,6 +217,7 @@
       margin-bottom: 24px;
 
       width: 600px;
+      font-weight: 400;
 
       font-size: 40px;
       line-height: 1.23;
@@ -213,6 +231,7 @@
       margin-bottom: 40px;
 
       font-size: 24px;
+      font-weight: 400;
       line-height: 1.25;
     }
   }
@@ -248,7 +267,7 @@
     &__subtitle {
       text-align: start;
     }
-    
+
     &__subsubtitle {
       margin-left: 0;
       margin-bottom: 60px;

@@ -1,2 +1,0 @@
-import './productsSlider'
-import './hero';

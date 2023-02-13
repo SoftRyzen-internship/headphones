@@ -5,7 +5,9 @@
 }
 
 .header {
+  position: relative;
   padding: 20px 0;
+  z-index: 100;
 
   box-shadow: var(--primary-shadow);
 

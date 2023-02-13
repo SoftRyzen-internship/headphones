@@ -1,168 +1,38 @@
 <footer class="footer">
-  <!-- SVG Sprite -->
-  <svg
-    width="0"
-    height="0"
-    aria-hidden="true"
-    style="position: absolute; width: 0; height: 0; overflow: hidden"
-    version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-  >
-    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="footer-logo">
-      <g>
-        <path
-          d="M10.821 13.988h1.979v6.017h-1.979c-0.359 0-0.691-0.053-0.998-0.158-0.296-0.116-0.554-0.296-0.776-0.538-0.211-0.243-0.38-0.554-0.507-0.934-0.116-0.38-0.174-0.839-0.174-1.378s0.058-0.998 0.174-1.378c0.127-0.38 0.296-0.691 0.507-0.934 0.222-0.243 0.48-0.417 0.776-0.523 0.306-0.116 0.639-0.174 0.998-0.174zM8.826 20.828c0.602 0.19 1.267 0.285 1.995 0.285h4.196v-1.911c-0.883-0.427-1.491-1.331-1.491-2.377s0.609-1.95 1.491-2.377v-4.419h-2.217v2.85h-1.979c-0.728 0-1.393 0.095-1.995 0.285-0.591 0.19-1.098 0.465-1.52 0.823s-0.75 0.792-0.982 1.298c-0.222 0.507-0.333 1.077-0.333 1.71s0.111 1.203 0.333 1.71c0.232 0.507 0.559 0.94 0.982 1.298s0.929 0.633 1.52 0.823zM17.227 19.241v1.872h4.196c0.728 0 1.388-0.095 1.979-0.285 0.602-0.19 1.114-0.465 1.536-0.823s0.744-0.792 0.966-1.298c0.232-0.507 0.348-1.077 0.348-1.71s-0.116-1.203-0.348-1.71c-0.222-0.507-0.544-0.94-0.966-1.298s-0.934-0.633-1.536-0.823c-0.591-0.19-1.251-0.285-1.979-0.285h-1.979v-2.85h-2.217v4.379c0.929 0.409 1.577 1.337 1.577 2.417s-0.648 2.008-1.577 2.417zM22.405 19.847c-0.296 0.106-0.623 0.158-0.982 0.158h-1.979v-6.017h1.979c0.359 0 0.686 0.058 0.982 0.174 0.306 0.106 0.565 0.28 0.776 0.523 0.222 0.243 0.391 0.554 0.507 0.934 0.127 0.38 0.19 0.839 0.19 1.378s-0.063 0.998-0.19 1.378c-0.116 0.38-0.285 0.691-0.507 0.934-0.211 0.243-0.47 0.422-0.776 0.538z"
-        ></path>
-        <path
-          d="M17.485 16.825c0 0.729-0.591 1.32-1.32 1.32s-1.32-0.591-1.32-1.32c0-0.729 0.591-1.32 1.32-1.32s1.32 0.591 1.32 1.32z"
-        ></path>
-        <path
-          class="icon-logo-border"
-          fill-opacity="0"
-          stroke="#f5f5f5"
-          stroke-linejoin="miter"
-          stroke-linecap="butt"
-          stroke-miterlimit="4"
-          stroke-width="0.3299"
-          d="M31.835 16c0 8.745-7.090 15.835-15.835 15.835s-15.835-7.090-15.835-15.835c0-8.745 7.090-15.835 15.835-15.835s15.835 7.090 15.835 15.835z"
-        ></path>
-      </g>
-      {% include 'components/svg-gradient.html' %}
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="footer-instagram">
-      <g>
-        <path
-          d="M10.353 8.471c-1.040 0-1.882 0.843-1.882 1.882v11.294c0 1.040 0.843 1.882 1.882 1.882h11.294c1.040 0 1.882-0.843 1.882-1.882v-11.294c0-1.040-0.843-1.882-1.882-1.882h-11.294zM20.872 12.013c0 0.489-0.397 0.886-0.886 0.886s-0.886-0.397-0.886-0.886c0-0.489 0.397-0.886 0.886-0.886s0.886 0.397 0.886 0.886zM12.014 16c0-2.211 1.806-3.986 3.986-3.986s3.986 1.806 3.986 3.986c0 2.18-1.775 3.986-3.986 3.986s-3.986-1.775-3.986-3.986zM13.447 16c0 1.401 1.152 2.554 2.554 2.554s2.554-1.152 2.554-2.554-1.152-2.554-2.554-2.554c-1.401 0-2.554 1.152-2.554 2.554z"
-        ></path>
-        <path
-          class="icon-border"
-          fill-opacity="0"
-          stroke="#000"
-          stroke-linejoin="miter"
-          stroke-linecap="butt"
-          stroke-miterlimit="4"
-          stroke-width="0.6275"
-          d="M10.039 0.314h11.922c5.371 0 9.726 4.354 9.726 9.726v11.922c0 5.371-4.354 9.726-9.726 9.726h-11.922c-5.371 0-9.726-4.354-9.726-9.726v-11.922c0-5.371 4.354-9.726 9.726-9.726z"
-        ></path>
-      </g>
-      {% include 'components/svg-gradient.html' %}
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="footer-telegram">
-      <g>
-        <path
-          d="M23.486 9.842l-2.273 12.779c-0.171 0.902-0.619 1.126-1.254 0.702l-3.462-3.043-1.671 1.916c-0.185 0.22-0.339 0.405-0.696 0.405l0.249-4.205 6.417-6.915c0.279-0.297-0.061-0.461-0.434-0.164l-7.933 5.957-3.415-1.275c-0.743-0.277-0.756-0.886 0.155-1.311l13.359-6.137c0.619-0.277 1.16 0.164 0.958 1.291z"
-        ></path>
-        <path
-          class="icon-border"
-          fill-opacity="0"
-          stroke="#000"
-          stroke-linejoin="miter"
-          stroke-linecap="butt"
-          stroke-miterlimit="4"
-          stroke-width="0.6275"
-          d="M10.039 0.314h11.922c5.371 0 9.726 4.354 9.726 9.726v11.922c0 5.371-4.354 9.726-9.726 9.726h-11.922c-5.371 0-9.726-4.354-9.726-9.726v-11.922c0-5.371 4.354-9.726 9.726-9.726z"
-        ></path>
-      </g>
-      {% include 'components/svg-gradient.html' %}
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="footer-youtube">
-      <g>
-        <path
-          d="M21.883 11.281c0.648 0.165 1.158 0.653 1.331 1.272 0.315 1.122 0.315 3.463 0.315 3.463s0 2.341-0.315 3.463c-0.173 0.619-0.683 1.086-1.331 1.252-1.174 0.3-5.883 0.3-5.883 0.3s-4.709 0-5.883-0.3c-0.648-0.166-1.158-0.633-1.331-1.252-0.315-1.122-0.315-3.463-0.315-3.463s0-2.341 0.315-3.463c0.173-0.619 0.683-1.106 1.331-1.272 1.174-0.301 5.883-0.301 5.883-0.301s4.709 0 5.883 0.3zM14.46 13.89v4.25l3.936-2.125-3.936-2.125z"
-        ></path>
-        <path
-          class="icon-border"
-          fill-opacity="0"
-          stroke="#000"
-          stroke-linejoin="miter"
-          stroke-linecap="butt"
-          stroke-miterlimit="4"
-          stroke-width="0.6275"
-          d="M10.039 0.314h11.922c5.371 0 9.726 4.354 9.726 9.726v11.922c0 5.371-4.354 9.726-9.726 9.726h-11.922c-5.371 0-9.726-4.354-9.726-9.726v-11.922c0-5.371 4.354-9.726 9.726-9.726z"
-        ></path>
-      </g>
-      {% include 'components/svg-gradient.html' %}
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="footer-facebook">
-      <g>
-        <path
-          d="M19.765 13.347h-2.778v-1.563c0-0.587 0.454-0.724 0.773-0.724s1.96 0 1.96 0v-2.58l-2.7-0.009c-2.997 0-3.679 1.925-3.679 3.156v1.72h-1.733v2.659h1.733c0 3.412 0 7.524 0 7.524h3.646c0 0 0-4.152 0-7.524h2.46l0.318-2.659z"
-        ></path>
-        <path
-          class="icon-border"
-          fill-opacity="0"
-          stroke="#000"
-          stroke-linejoin="miter"
-          stroke-linecap="butt"
-          stroke-miterlimit="4"
-          stroke-width="0.6275"
-          d="M10.039 0.314h11.922c5.371 0 9.726 4.354 9.726 9.726v11.922c0 5.371-4.354 9.726-9.726 9.726h-11.922c-5.371 0-9.726-4.354-9.726-9.726v-11.922c0-5.371 4.354-9.726 9.726-9.726z"
-        ></path>
-      </g>
-      {% include 'components/svg-gradient.html' %}
-    </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="footer-linkedin">
-      <g>
-        <path
-          d="M11.74 23.529h-3.215v-10.756h3.215v10.756zM23.529 23.529h-3.215v-5.746c0-1.497-0.532-2.243-1.585-2.243-0.835 0-1.364 0.417-1.63 1.253 0 1.357 0 6.736 0 6.736h-3.215c0 0 0.043-9.681 0-10.756h2.538l0.196 2.151h0.066c0.659-1.076 1.713-1.805 3.157-1.805 1.099 0 1.987 0.306 2.666 1.077 0.683 0.771 1.023 1.806 1.023 3.259v6.074z"
-        ></path>
-        <path
-          d="M10.132 11.698c0.918 0 1.661-0.722 1.661-1.614s-0.744-1.613-1.661-1.613-1.661 0.722-1.661 1.613c0 0.891 0.744 1.614 1.661 1.614z"
-        ></path>
-        <path
-          class="icon-border"
-          fill-opacity="0"
-          stroke="#000"
-          stroke-linejoin="miter"
-          stroke-linecap="butt"
-          stroke-miterlimit="4"
-          stroke-width="0.6275"
-          d="M10.039 0.314h11.922c5.371 0 9.726 4.354 9.726 9.726v11.922c0 5.371-4.354 9.726-9.726 9.726h-11.922c-5.371 0-9.726-4.354-9.726-9.726v-11.922c0-5.371 4.354-9.726 9.726-9.726z"
-        ></path>
-      </g>
-      {% include 'components/svg-gradient.html' %}
-    </symbol>
-  </svg>
   <div class="container footer__container">
     <div class="footer__block">
       <div class="footer__logo">
         <div class="footer__logo-icon">
-          <a href="#" class="icon-footer-logo link">
-            <svg class="footer__logo-svg" width="48" height="48">
-              <use xlink:href="#footer-logo"></use>
-            </svg>
+          <a href="#" class="icon-footer-logo link link-footer icon-logo">
             <span class="footer__logo-span">Dream Beats</span>
           </a>
         </div>
       </div>
-      <div class="footer-navigation">
+      <nav class="footer-navigation">
         <ul class="footer-navigation__list list">
           <li class="footer-navigation__list-item">
-            <a class="footer-navigation__link link" href="#">About</a>
+            <a class="link-footer link link-footer" href="#about">About</a>
           </li>
           <li class="footer-navigation__list-item">
-            <a class="footer-navigation__link link" href="#">Color</a>
+            <a class="link-footer link" href="#color">Color</a>
           </li>
           <li class="footer-navigation__list-item">
-            <a class="footer-navigation__link link" href="#">Characteristics</a>
+            <a class="link-footer link" href="#characteristics">Characteristics</a>
           </li>
           <li class="footer-navigation__list-item">
-            <a class="footer-navigation__link link" href="#">Buy</a>
+            <a class="link-footer link" href="#buy">Buy</a>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
     <div class="footer-contacts">
-      <h4 class="footer-contacts__title">Contacts:</h4>
+      <h3 class="footer-contacts__title">Contacts:</h3>
       <ul class="footer-contacts__list list">
         <li class="footer-contacts__list-item">
-          <a href="www.dreambeats.com" class="footer-contacts__link link">www.dreambeats.com</a>
+          <a href="www.dreambeats.com" class="link-footer link">www.dreambeats.com</a>
         </li>
         <li class="footer-contacts__list-item">
-          <a href="mailto:dreambeats@mple.com link" class="footer-contacts__link link"
-            >dreambeats@mple.com</a
-          >
+          <a href="mailto:dreambeats@mple.com" class="link-footer link">dreambeats@mple.com</a>
         </li>
       </ul>
     </div>
@@ -170,45 +40,53 @@
       <div class="footer-social">
         <ul class="footer-social__list list">
           <li class="footer-social__list-item">
-            <a href="#" class="footer-social__list-link link" target="_blank">
-              <svg class="footer-social__svg" width="32" height="32">
-                <use xlink:href="#footer-instagram"></use>
-              </svg>
+            <a
+              href="#"
+              class="footer-social__list-link icon-instagram"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
             </a>
           </li>
           <li class="footer-social__list-item">
-            <a href="#" class="footer-social__list-link link" target="_blank">
-              <svg class="footer-social__svg" width="32" height="32">
-                <use xlink:href="#footer-telegram"></use>
-              </svg>
+            <a
+              href="#"
+              class="footer-social__list-link link icon-telegram"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
             </a>
           </li>
           <li class="footer-social__list-item">
-            <a href="#" class="footer-social__list-link link" target="_blank">
-              <svg class="footer-social__svg" width="32" height="32">
-                <use xlink:href="#footer-youtube"></use>
-              </svg>
+            <a
+              href="#"
+              class="footer-social__list-link link icon-youtube"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
             </a>
           </li>
           <li class="footer-social__list-item">
-            <a href="#" class="footer-social__list-link link" target="_blank">
-              <svg class="footer-social__svg" width="32" height="32">
-                <use xlink:href="#footer-facebook"></use>
-              </svg>
+            <a
+              href="#"
+              class="footer-social__list-link link icon-facebook"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
             </a>
           </li>
           <li class="footer-social__list-item">
-            <a href="#" class="footer-social__list-link link" target="_blank">
-              <svg class="footer-social__svg" width="32" height="32">
-                <use xlink:href="#footer-linkedin"></use>
-              </svg>
+            <a
+              href="#"
+              class="footer-social__list-link link icon-linkedin"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
             </a>
           </li>
         </ul>
       </div>
-      <div class="footer__copy">
-        <p>Copyright © 2022</p>
-      </div>
+      <div class="footer__copy icon-softryzen"></div>
     </div>
   </div>
 </footer>

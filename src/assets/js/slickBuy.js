@@ -45,7 +45,10 @@ const replaceImgPath = (elemList, replaceAttr, searchStr, replaceStr) => {
 
 const colorClickHandler = e => {
   const clickedButton = e.target;
-  if (clickedButton.classList.contains('current')) {
+  if (
+    !clickedButton.classList.contains('buy__color-button') |
+    clickedButton.classList.contains('current')
+  ) {
     return;
   } else {
     const clickedColor = e.target.dataset.color;

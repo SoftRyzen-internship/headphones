@@ -4,15 +4,15 @@ const sendBtn = document.querySelector('.send__btn');
 const username = document.getElementById('name');
 const phone = document.getElementById('telephone');
 
-const isValidValues = {
-  name: false,
-  phone: false,
-};
-
 // SET DISABLED BUTTON
 sendBtn.setAttribute('disabled', 'disabled');
 
 form.addEventListener('input', e => {
+  const isValidValues = {
+    name: true,
+    phone: true,
+  };
+
   if (e.target.id === 'name') {
     const isValidName = checkInputName(e.target.value);
 
@@ -32,6 +32,8 @@ form.addEventListener('input', e => {
       isValidValues.phone = false;
     }
   }
+
+  console.log('isValidValues', isValidValues);
 
   // REMOVE DISABLED BUTTON
   if (isValidValues.name === true && isValidValues.phone === true) {

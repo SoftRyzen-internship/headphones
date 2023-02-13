@@ -7,29 +7,33 @@ const phone = document.getElementById('telephone');
 // SET DISABLED BUTTON
 sendBtn.setAttribute('disabled', 'disabled');
 
-form.addEventListener('input', e => {
-  const isValidValues = {
-    name: true,
-    phone: true,
-  };
+const isValidValues = {
+  name: false,
+  phone: false,
+};
 
+form.addEventListener('input', e => {
   if (e.target.id === 'name') {
     const isValidName = checkInputName(e.target.value);
 
-    if (isValidName === true) {
+    if (isValidName) {
       isValidValues.name = true;
-    } else {
+    }
+    if (!isValidName) {
       isValidValues.name = false;
+      sendBtn.setAttribute('disabled', 'disabled');
     }
   }
 
   if (e.target.id === 'telephone') {
     const isValidPhone = checkInputPhone(e.target.value);
 
-    if (isValidPhone === true) {
+    if (isValidPhone) {
       isValidValues.phone = true;
-    } else {
+    }
+    if (!isValidPhone) {
       isValidValues.phone = false;
+      sendBtn.setAttribute('disabled', 'disabled');
     }
   }
 
@@ -44,7 +48,10 @@ form.addEventListener('input', e => {
 form.addEventListener('submit', e => {
   e.preventDefault();
 
-  e.currentTarget.reset();
+  // REMOVE DISABLED BUTTON
+  if (isValidValues.name === true && isValidValues.phone === true) {
+    e.currentTarget.reset();
+  }
 });
 
 // CHECK INPUT NAME
@@ -55,7 +62,7 @@ const checkInputName = name => {
   const usernameValue = name.trim();
 
   // VALIDATION NAME
-  const nameRe = /[a-zA-Z]/;
+  const nameRe = /^[a-zA-Z-]+$/;
   if (!usernameValue) {
     //Show error
     //Add error class
@@ -83,16 +90,18 @@ const checkInputPhone = phoneInput => {
   // Get values from the inputs
   const phoneValue = phoneInput.trim();
 
+  console.log(phoneValue.length);
+
   // VALIDATION PHONE
-  const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+  const re = /^[0-9+-]+$/;
   if (!phoneValue) {
     //Show error
     //Add error class
     setErrorFor(phone, 'Error(field is required)');
-  } else if (phoneValue.length < 10) {
-    setErrorFor(phone, 'Error(from 10 to 14 numbers)');
-  } else if (phoneValue.length > 14) {
-    setErrorFor(phone, 'Error(from 10 to 14 numbers)');
+  } else if (!phoneValue.startsWith('+44')) {
+    setErrorFor(phone, 'Error(start with "+44)');
+  } else if (phoneValue.length < 13 || phoneValue.length >= 14) {
+    setErrorFor(phone, 'Error(only 12 numbers)');
   } else if (!phoneValue.match(re)) {
     //Add error class
     setErrorFor(phone, 'Error(only numbers)');

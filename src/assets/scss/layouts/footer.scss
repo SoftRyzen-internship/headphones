@@ -1,96 +1,21 @@
-// .footer {
-//   padding-top: 22px;
-//   padding-bottom: 17px;
-
-//   font-size: 14px;
-//   line-height: 1.5;
-//   color: var(--gray-txt-cl);
-//   background-color: var(--white-bg);
-
-//   p:not(:last-child) {
-//     margin-bottom: 7px;
-//   }
-
-//   &-wrapper {
-//     color: var(--gray-txt-cl);
-//     @include mq(tablet) {
-//       display: flex;
-//       justify-content: space-between;
-//       color: var(--secondary-txt-cl);
-//     }
-//   }
-//   &-link {
-//     display: block;
-
-//     @include mq(mobile-only) {
-//       margin-bottom: 22px;
-//     }
-//   }
-//   &-logo {
-//     @include mq(mobile-only) {
-//       margin-left: auto;
-//       margin-right: auto;
-//     }
-//   }
-//   .address,
-//   .copyright {
-//     @include mq(mobile-only) {
-//       display: none;
-//     }
-//   }
-//   .address {
-//   }
-//   .copyright {
-//   }
-// }
-// .footer-nav-list {
-//   @include mq(mobile-only) {
-//     display: flex;
-//     justify-content: space-around;
-//   }
-//   @include mq(desktop) {
-//     display: flex;
-//   }
-
-//   & > .item {
-//     @include mq(tablet) {
-//       font-size: 16px;
-//     }
-//     @include mq(desktop) {
-//       &:not(:last-child) {
-//         margin-right: 50px;
-//       }
-//     }
-//   }
-// }
-
 .footer {
-  background-color: var(--primary-bg);
   color: var(--primary-txt-cl);
   font-family: var(--title-font);
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   font-weight: 400;
   padding-bottom: 24px;
   padding-top: 24px;
-
-  // @include mq(mobile-only) {
-  //   background-color: pink;
-  // }
-  // @include mq(mobile) {
-  //   background-color: red;
-  // }
+  box-shadow: 0px -3px 44px rgba(0, 0, 0, 0.25);
 
   @include mq(tablet) {
-    // background-color: green;
-    // float: left;
     display: flex;
-    // justify-content: space-between;
     padding-bottom: 40px;
     padding-top: 40px;
   }
 
-  .link {
+  .link-footer {
+    transition: all var(--fast) ease-in-out;
     &:hover,
     &:focus {
       /* Create the gradient. */
@@ -135,6 +60,7 @@
   }
   &__logo {
     width: 202px;
+    line-height: 0;
     margin: 0 auto;
     @include mq(tablet) {
       // float: left;
@@ -146,29 +72,10 @@
     width: 202px;
   }
 
-  &__logo-svg {
-    transition: all 0.3s ease;
-    display: inline-block;
-    -webkit-transition: fill 0.4s ease;
-    -moz-transition: fill 0.4s ease;
-    -o-transition: fill 0.4s ease;
-    transition: fill 0.4s ease;
-
-    fill: var(--primary-txt-cl);
-
-    &:hover,
-    &:focus {
-      fill: url(#paint0_linear_429_92);
-    }
-    &:active {
-      fill: url(#paint1_linear_439_92);
-    }
-  }
-
   &__logo-span {
     margin-left: 12px;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 1.25;
   }
 
   &__copy {
@@ -178,13 +85,11 @@
     font-size: 14px;
     text-align: center;
     @include mq(tablet) {
-      // float: right;
       text-align: right;
     }
   }
 }
-.container {
-}
+
 .icon-footer-logo {
   display: flex;
   justify-content: center;
@@ -194,53 +99,57 @@
   }
 }
 .footer-navigation {
-  @include mq(tablet) {
-    // float: right;
-  }
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 24px;
+    margin-top: 20px;
+    @include mq(mobile-only) {
+      column-gap: 20px;
+      row-gap: 16px;
+    }
     @include mq(tablet) {
       margin-top: 0;
     }
   }
 
   &__list-item {
-    &:not(:last-child) {
-      margin-right: 24px;
+    @include mq(mobile) {
+      line-height: 1.25;
     }
-    margin-bottom: 14px;
     @include mq(tablet) {
       margin-bottom: 0px;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
     }
-  }
-
-  &__link {
   }
 }
 .footer-contacts {
   text-align: center;
   margin-bottom: 20px;
+  @include mq(mobile-only) {
+    margin-top: 32px;
+  }
   @include mq(tablet) {
-    // float: left;
     text-align: left;
     margin-bottom: 0px;
   }
   @include mq(desktop) {
     position: absolute;
     left: 423px;
-    bottom: 0px;
+    top: 12px;
   }
   &__title {
     font-weight: 400;
+    font-size: 16px;
     margin-bottom: 16px;
     @include mq(tablet) {
       margin-bottom: 8px;
+      line-height: 1.25;
     }
     @include mq(desktop) {
-      margin-bottom: 13px;
+      margin-bottom: 12px;
     }
   }
 
@@ -253,11 +162,9 @@
       margin-bottom: 8px;
     }
   }
-
-  &__link {
-  }
 }
 .footer-block-social {
+  line-height: 0;
   @include mq(desktop) {
     display: flex;
     justify-content: space-between;
@@ -267,14 +174,15 @@
 }
 .footer-social {
   text-align: center;
-  @include mq(tablet) {
-    // float: right;
+  @include mq(tablet-only) {
+    margin-bottom: 36px;
   }
 
   &__list {
     display: flex;
     justify-content: center;
-    margin-bottom: 32px;
+    margin-bottom: 37px;
+
     @include mq(tablet) {
       margin-bottom: 25px;
     }
@@ -284,62 +192,47 @@
   }
 
   &__list-item {
+    transition: all var(--fast) ease-in-out;
     &:not(:last-child) {
       margin-right: 16px;
+    }
+    &:hover,
+    &:focus,
+    &:focus-within {
+      transform: scale(1.2);
     }
   }
 
   &__list-link {
-  }
-
-  &__svg {
-    transition: all 0.3s ease;
-    display: inline-block;
-    -webkit-transition: fill 0.4s ease;
-    -moz-transition: fill 0.4s ease;
-    -o-transition: fill 0.4s ease;
-    transition: fill 0.4s ease;
-
-    fill: url(#paint0_linear_138_104);
+    font-size: 32px;
+    text-decoration: none;
+    transition: all var(--fast) ease-in-out;
+    // transform: scale(1);
+    /* Create the gradient. */
+    background-image: var(--normal-gradient-bg);
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
     &:hover,
     &:focus {
-      fill: url(#paint0_linear_429_92);
+      background-image: var(--hover-gradient-bg);
     }
     &:active {
-      fill: url(#paint1_linear_439_92);
+      background-image: var(--active-gradient-bg);
     }
   }
 }
 
-.icon-border {
-  transition: all 0.3s ease;
-  display: inline-block;
-  -webkit-transition: stroke 0.4s ease;
-  -moz-transition: stroke 0.4s ease;
-  -o-transition: stroke 0.4s ease;
-  transition: stroke 0.4s ease;
-  stroke: url(#paint0_linear_138_104);
+.icon-logo {
+  font-size: 48px;
 }
-.icon-border:hover,
-.icon-border:focus {
-  stroke: url(#paint0_linear_429_92);
-}
-.icon-border:active {
-  stroke: url(#paint0_linear_439_92);
-}
-.icon-logo-border {
-  transition: all 0.3s ease;
-  display: inline-block;
-  -webkit-transition: stroke 0.4s ease;
-  -moz-transition: stroke 0.4s ease;
-  -o-transition: stroke 0.4s ease;
-  transition: stroke 0.4s ease;
-  stroke: var(--primary-txt-cl);
-}
-.icon-logo-border:hover,
-.icon-logo-border:focus {
-  stroke: url(#paint0_linear_429_92);
-}
-.icon-logo-border:active {
-  stroke: url(#paint0_linear_439_92);
+.icon-softryzen {
+  font-size: 16px;
+  color: var(--primary-txt-cl);
 }

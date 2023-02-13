@@ -290,6 +290,20 @@
     }
   }
 
+  .hero__container{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+  }
+
+  ul {
+    overflow: hidden;
+  }
+
+  .slick-slider{
+    position: static;
+  }
+
   &__img {
     margin-left: 14px;
 

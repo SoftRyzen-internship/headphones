@@ -22,8 +22,11 @@
 .about__list {
   @include mq(tablet) {
     display: grid;
+    padding-left: 112px;
+    padding-right: 112px;
+    justify-content: space-between;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 191px 173px;
   }
   @include mq(desktop) {
     padding-left: 40px;

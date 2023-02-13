@@ -1,118 +1,115 @@
-<section class="section hero">
+<section class="hero">
   <div class="container hero__container">
-    <div class="hero__wrapper">
-      <h1 class="section-title hero__title">hero</h1>
+    <h1 class="hero__title">Dream Beats 3.0</h1>
 
-      <div class="hero__tablet-wrap">
-        <div class="hero__thumb">
-          <ul class="list hero__list">
-            <li class="hero__item">
-              <svg class="hero__svg">
-                <use href="./assets/images/sprite.svg#icon-js"></use>
-              </svg>
-            </li>
-            <li class="hero__item">
-              <svg class="hero__svg">
-                <use href="./assets/images/sprite.svg#icon-php"></use>
-              </svg>
-            </li>
-            <li class="hero__item">
-              <svg class="hero__svg">
-                <use href="./assets/images/sprite.svg#icon-css"></use>
-              </svg>
-            </li>
-          </ul>
+    <ul class="hero__img-wrapper">
+      <!-- blue -->
+      <li>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              ./assets/images/hero/headphones-blue.webp    1x,
+              ./assets/images/hero/headphones-blue@2x.webp 2x
+            "
+          />
 
-          <picture>
-            <source
-              srcset="
-                ./assets/images/hero/hero-ellipse@1x.webp 1x,
-                ./assets/images/hero/hero-ellipse@2x.webp 2x
-              "
-              media="(min-width: 1280px)"
-              type="image/webp"
-            />
-            <source
-              srcset="
-                ./assets/images/hero/hero-ellipse@2x.png 2x,
-                ./assets/images/hero/hero-ellipse@1x.png 1x
-              "
-              media="(min-width: 1280px)"
-              type="image/png"
-            />
+          <img
+            class="hero__img"
+            src="./assets/images/hero/headphones-blue.png"
+            srcset="./assets/images/hero/headphones-blue@2x.png 2x"
+            alt="headphones"
+            width="100%"
+          />
+        </picture>
+      </li>
 
-            <source
-              srcset="
-                ./assets/images/hero/tablet/hero-ellipse-tablet@1x.png 1x,
-                ./assets/images/hero/tablet/hero-ellipse-tablet@2x.png 2x
-              "
-              media="(min-width: 768px)"
-              type="image/png"
-            />
-            <source
-              srcset="
-                ./assets/images/hero/tablet/hero-ellipse-tablet@1x.webp 1x,
-                ./assets/images/hero/tablet/hero-ellipse-tablet@2x.webp 2x
-              "
-              media="(min-width: 768px)"
-              type="image/webp"
-            />
+      <!-- pink -->
+      <li>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              ./assets/images/hero/headphones-pink.webp    1x,
+              ./assets/images/hero/headphones-pink@2x.webp 2x
+            "
+          />
 
-            <img
-              class="hero__elipse"
-              src="./assets/images/hero/hero-ellipse@1x.png"
-              alt="hero-elipse"
-              width="417"
-              height="417"
-              loading="lazy"
-            />
-          </picture>
+          <img
+            class="hero__img visually-hidden"
+            src="./assets/images/hero/headphones-pink.png"
+            srcset="./assets/images/hero/headphones-pink@2x.png 2x"
+            alt="headphones"
+            width="100%"
+          />
+        </picture>
+      </li>
 
-          <picture>
-            <source
-              srcset="
-                ./assets/images/hero/hero-boy@1x.webp 1x,
-                ./assets/images/hero/hero-boy@2x.webp 2x
-              "
-              media="(min-width: 1280px)"
-              type="image/webp"
-            />
-            <source
-              srcset="
-                ./assets/images/hero/hero-boy@1x.png 1x,
-                ./assets/images/hero/hero-boy@2x.png 2x
-              "
-              media="(min-width: 1280px)"
-              type="image/png"
-            />
+      <!-- black -->
+      <li>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              ./assets/images/hero/headphones-black.webp    1x,
+              ./assets/images/hero/headphones-black@2x.webp 2x
+            "
+          />
 
-            <source
-              srcset="
-                ./assets/images/hero/tablet/hero-boy-tablet@1x.webp 1x,
-                ./assets/images/hero/tablet/hero-boy-tablet@2x.webp 2x
-              "
-              media="(min-width: 768px)"
-              type="image/webp"
-            />
-            <source
-              srcset="
-                ./assets/images/hero/tablet/hero-boy-tablet@1x.png 1x,
-                ./assets/images/hero/tablet/hero-boy-tablet@2x.png 2x
-              "
-              media="(min-width: 768px)"
-              type="image/png"
-            />
+          <img
+            class="hero__img visually-hidden"
+            src="./assets/images/hero/headphones-black.png"
+            srcset="./assets/images/hero/headphones-black@2x.png 2x"
+            alt="headphones"
+            width="100%"
+          />
+        </picture>
+      </li>
 
-            <img
-              class="hero__img"
-              src="./assets/images/hero/hero-boy@1x.png"
-              alt="hero-boy"
-              width="330"
-              height="476"
-              loading="lazy"
-            />
-          </picture>
-        </div>
+      <!-- violet -->
+      <li>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              ./assets/images/hero/headphones-violet.webp    1x,
+              ./assets/images/hero/headphones-violet@2x.webp 2x
+            "
+          />
+
+          <img
+            class="hero__img visually-hidden"
+            src="./assets/images/hero/headphones-violet.png"
+            srcset="./assets/images/hero/headphones-violet@2x.png 2x"
+            alt="headphones"
+            width="100%"
+          />
+        </picture>
+      </li>
+    </ul>
+
+    <ul class="hero__slider-list">
+      <li class="hero__slider-item hero__slider-item-active" data-action="blue">
+        <button class="hero__slider-btn hero__slider-btn--blue" type="button"></button>
+      </li>
+      <li class="hero__slider-item" data-action="pink">
+        <button class="hero__slider-btn hero__slider-btn--pink" type="button"></button>
+      </li>
+      <li class="hero__slider-item" data-action="black">
+        <button class="hero__slider-btn hero__slider-btn--black" type="button"></button>
+      </li>
+      <li class="hero__slider-item" data-action="violet">
+        <button class="hero__slider-btn hero__slider-btn--violet" type="button"></button>
+      </li>
+    </ul>
+
+    <div class="hero__desktop-wrapper">
+      <h1 class="hero__title hero__desktop-title">Dream Beats 3.0</h1>
+      <h2 class="hero__subtitle">Wireless Noise Cancelling Over-Ear Headphones</h2>
+
+      <div class="hero__btn-h3-wrapper">
+        <button class="hero__btn btn">Buy now</button>
+        <h3 class="hero__subsubtitle">Hear the music. Not the noise.</h3>
       </div>
     </div>
   </div>

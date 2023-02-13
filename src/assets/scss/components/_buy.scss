@@ -55,19 +55,20 @@
       display: block;
       position: absolute;
       top: 34px;
-      left: 32px;
+      left: 26px;
       width: 148px;
       height: 148px;
       border-radius: 50%;
-      filter: blur(50px);
-      background: var(--normal-gradient-bg);
+      filter: blur(44px);
+      background: linear-gradient(90deg, #0077aa 17.5%, #ff4488 100%);
+
       @include mq(tablet) {
         top: 60px;
-        left: 40px;
+        left: 60px;
         width: 300px;
         height: 300px;
         border-radius: 50%;
-        filter: blur(100px);
+        filter: blur(88px);
       }
     }
   }
@@ -212,7 +213,7 @@
       height: 60px;
       position: relative;
       cursor: pointer;
-      border: 1px solid #000;
+      border: 1px solid #181818;
       border-radius: 7px;
       @include mq(tablet) {
         border-radius: 12px;
@@ -236,7 +237,7 @@
           bottom: 0;
           border-radius: 7px;
           border: 1px solid transparent;
-          background: var(--normal-gradient-bg) border-box;
+          background: linear-gradient(90deg, #0077aa 17.5%, #ff4488 100%) border-box;
           -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
           -webkit-mask-composite: destination-out;
           mask-composite: exclude;

@@ -4,13 +4,7 @@
   padding-right: 24px;
   margin-right: auto;
   margin-left: auto;
-
-
-  @include mq(mobile) {
-    max-width: 320px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+  max-width: 320px;
 
   @include mq(tablet) {
     max-width: 768px;

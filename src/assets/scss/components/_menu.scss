@@ -3,7 +3,6 @@
     display: none;
     @include mq(tablet) {
       display: block;
-      margin-left: auto;
     }
   }
   .nav-list {
@@ -12,7 +11,6 @@
     }
   }
   .nav-item:not(:last-child) {
-    margin-right: 20px;
     @include mq(tablet) {
       margin-right: 40px;
     }
@@ -20,14 +18,15 @@
   .nav-link {
     font-size: 16px;
     line-height: 1.25;
-    font-family: inherit;
-    color: var(--primary-txt-cl);
+    font-family: var(--title-font);
 
-    transition: color var(--fast) linear;
+    background: var(--normal-gradient-bg);
+    background-clip: text;
+    -webkit-background-clip: text;
 
     &:hover,
     &:focus {
-      color: var(--accent-cl);
+      color: rgba(0, 0, 0, 0);
     }
   }
 }

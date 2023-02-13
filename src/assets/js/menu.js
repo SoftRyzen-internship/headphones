@@ -18,7 +18,7 @@
   });
 
   function toggleMenu() {
-    if (window.innerWidth < 1280) {
+    if (window.innerWidth < 768) {
       const expanded = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
 
       openMenuBtn.classList.toggle('is-active');

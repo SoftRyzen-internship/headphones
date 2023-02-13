@@ -25,7 +25,6 @@ form.addEventListener('input', e => {
 
   if (e.target.id === 'telephone') {
     const isValidPhone = checkInputPhone(e.target.value);
-    console.log('isValidPhone', isValidPhone);
 
     if (isValidPhone === true) {
       isValidValues.phone = true;
@@ -81,8 +80,6 @@ const checkInputPhone = phoneInput => {
   let isValidPhone = false;
   // Get values from the inputs
   const phoneValue = phoneInput.trim();
-
-  console.log('phoneValue', phoneValue);
 
   // VALIDATION PHONE
   const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;

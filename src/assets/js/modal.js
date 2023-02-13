@@ -14,9 +14,7 @@ $(document).ready(function () {
 
   openModalBtn.forEach(function (btn) {
     btn.addEventListener('click', e => {
-      document.addEventListener('keydown', handleKey);
-      backdrop.addEventListener('mousedown', handleClose);
-
+      console.log('click on modal');
       e.preventDefault();
 
       //remove values in form
@@ -42,8 +40,6 @@ $(document).ready(function () {
       if (e.key === 'Escape') {
         toggleModal();
       }
-
-      document.removeEventListener('keydown', handleKey);
     }
     return;
   }
@@ -52,7 +48,6 @@ $(document).ready(function () {
     if (e.target === e.currentTarget) {
       toggleModal();
     }
-    backdrop.removeEventListener('mousedown', handleClose);
 
     return;
   }

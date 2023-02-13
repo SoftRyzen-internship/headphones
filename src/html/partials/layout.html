@@ -5,20 +5,13 @@
   <head>
     {%include 'head.html' %}
   </head>
-  <head>
-    {%include 'head.html' %}
-  </head>
 
-    <body>
-      {% include 'gtm.html' %}
+  <body>
+    {% include 'gtm.html' %}
 
-      <div class="page">{% block content %} {% endblock %}</div>
+    <div class="page">{% block content %} {% endblock %}</div>
 
-    {% include 'modal.html' %}
-    <script src="assets/js/app.js"></script>
-  </body>
     {% include 'modal.html' %} {% include 'popup.html' %}
     <script src="assets/js/app.js"></script>
   </body>
 </html>
-

@@ -13,24 +13,25 @@ const isValidValues = {
 sendBtn.setAttribute('disabled', 'disabled');
 
 form.addEventListener('input', e => {
-  const isValidName = checkInputName(e.currentTarget.name);
+  if (e.target.id === 'name') {
+    const isValidName = checkInputName(e.target.value);
 
-  if (isValidName === true) {
-    isValidValues.name = true;
-    console.log('isValidValues', isValidValues);
+    if (isValidName === true) {
+      isValidValues.name = true;
+    } else {
+      isValidValues.name = false;
+    }
   }
 
-  // REMOVE DISABLED BUTTON
-  if (isValidValues.name === true && isValidValues.phone === true) {
-    sendBtn.removeAttribute('disabled');
-  }
-});
+  if (e.target.id === 'telephone') {
+    const isValidPhone = checkInputPhone(e.target.value);
+    console.log('isValidPhone', isValidPhone);
 
-form.addEventListener('input', e => {
-  const isValidPhone = checkInputPhone(e.currentTarget.telephone);
-
-  if (isValidPhone === true) {
-    isValidValues.phone = true;
+    if (isValidPhone === true) {
+      isValidValues.phone = true;
+    } else {
+      isValidValues.phone = false;
+    }
   }
 
   // REMOVE DISABLED BUTTON
@@ -50,9 +51,7 @@ const checkInputName = name => {
   let isValidName = false;
 
   // Get values from the inputs
-  const usernameValue = name.value.trim();
-
-  // console.log('usernameValue', usernameValue);
+  const usernameValue = name.trim();
 
   // VALIDATION NAME
   const nameRe = /[a-zA-Z]/;
@@ -78,12 +77,12 @@ const checkInputName = name => {
 };
 
 // CHECK INPUT PHONE
-const checkInputPhone = phone => {
+const checkInputPhone = phoneInput => {
   let isValidPhone = false;
   // Get values from the inputs
-  const phoneValue = phone.value.trim();
+  const phoneValue = phoneInput.trim();
 
-  // console.log('phoneValue', phoneValue);
+  console.log('phoneValue', phoneValue);
 
   // VALIDATION PHONE
   const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;

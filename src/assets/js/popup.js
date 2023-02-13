@@ -10,9 +10,9 @@ $(document).ready(function () {
   openPopupBtn.forEach(function (btn) {
     btn.addEventListener('click', e => {
       e.preventDefault();
-      setTimeout(() => {
-        toggleModal();
-      }, 500);
+      // setTimeout(() => {
+      toggleModal();
+      // }, 500);
     });
   });
 

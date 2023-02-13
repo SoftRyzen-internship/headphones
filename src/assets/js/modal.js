@@ -14,18 +14,21 @@ $(document).ready(function () {
 
   openModalBtn.forEach(function (btn) {
     btn.addEventListener('click', e => {
+      document.addEventListener('keydown', handleKey);
+      backdrop.addEventListener('mousedown', handleClose);
+
       e.preventDefault();
 
       //remove values in form
       form[0].value = '';
-      form[1].value = '+';
-      //remove success class
+      form[1].value = '';
+      //remove success and error classes
       username.parentElement.classList.remove('success');
+      username.parentElement.classList.remove('error');
       phone.parentElement.classList.remove('success');
+      phone.parentElement.classList.remove('error');
 
-      setTimeout(() => {
-        toggleModal();
-      }, 500);
+      toggleModal();
     });
   });
 
@@ -39,6 +42,8 @@ $(document).ready(function () {
       if (e.key === 'Escape') {
         toggleModal();
       }
+
+      document.removeEventListener('keydown', handleKey);
     }
     return;
   }
@@ -47,6 +52,8 @@ $(document).ready(function () {
     if (e.target === e.currentTarget) {
       toggleModal();
     }
+    backdrop.removeEventListener('mousedown', handleClose);
+
     return;
   }
 

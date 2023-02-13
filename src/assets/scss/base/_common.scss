@@ -28,8 +28,9 @@ p {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
+ul,
+ol {
+  list-style: none;
 }
 
 img {
@@ -119,6 +120,16 @@ button {
     transform: scale(1.1);
   }
 
+  &:hover &__title,
+  &:focus &__title {
+    color: rgba(0, 0, 0, 0);
+  }
+
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: url(#paint0_linear_429_92);
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -132,14 +143,20 @@ button {
   }
 
   &__icon {
-    fill: red;
+    transition: var(--fast);
+    fill: var(--primary-txt-cl);
   }
 
   &__title {
     font-family: var(--title-font);
+    font-size: 16px;
     line-height: 1.25;
 
     color: var(--primary-txt-cl);
+
+    background: var(--normal-gradient-bg);
+    background-clip: text;
+    -webkit-background-clip: text;
   }
 
   @include mq(tablet) {

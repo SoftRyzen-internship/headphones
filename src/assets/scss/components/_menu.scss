@@ -20,13 +20,13 @@
     line-height: 1.25;
     font-family: var(--title-font);
 
-    background: var(--normal-gradient-bg);
-    background-clip: text;
-    -webkit-background-clip: text;
+    // background: var(--normal-gradient-bg);
+    // background-clip: text;
+    // -webkit-background-clip: text;
 
-    &:hover,
-    &:focus {
-      color: rgba(0, 0, 0, 0);
-    }
+    // &:hover,
+    // &:focus {
+    //   color: rgba(0, 0, 0, 0);
+    // }
   }
 }

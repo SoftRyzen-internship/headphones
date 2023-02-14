@@ -312,7 +312,7 @@
     font-family: var(--title-font);
     font-size: 24px;
     line-height: 1.25;
-    color: var(--black-txt-cl);
+    color: var(--secondary-txt-cl);
     &:before {
       content: '';
       display: block;
@@ -321,7 +321,7 @@
       top: 12px;
       left: 0;
 
-      border-bottom: 1px solid var(--black-txt-cl);
+      border-bottom: 1px solid var(--secondary-txt-cl);
       transform: rotate(-21.5deg);
     }
   }

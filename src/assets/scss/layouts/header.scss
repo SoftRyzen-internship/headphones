@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   font-size: 32px;
-  @include mq(tablet-only) {
+  @include mq(tablet) {
     font-size: 48px;
   }
 }

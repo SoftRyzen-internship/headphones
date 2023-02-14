@@ -3,46 +3,6 @@
   @include mq(mobile-only) {
     padding-bottom: 226px;
   }
-  @include mq(mobile) {
-    background-image: url('../images/characteristics/mobile/elipse-right-top-mobile.svg'),
-      url('../images/characteristics/mobile/elipse-left-bottom-mobile.svg'),
-      url('../images/characteristics/mobile/bg-mobile.png');
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 200px 423px, -125px 567px, -282px 631px;
-    background-size: 345px 483px, 345px 483px, 1070px 314px;
-  }
-  @include mq(tablet) {
-    background-image: url('../images/characteristics/ellipse-min.svg'),
-      url('../images/characteristics/ellipse-min.svg'),
-      url('../images/characteristics/characteristics-bg.png'),
-      url('../images/characteristics/characteristics-bg-desktop.png');
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-position: -10px 132px, -330px 692px, -77px 145px, -652px 705px;
-    background-size: 979px auto, 979px auto, 1440px auto, 2053px auto;
-    @include mq(retina) {
-      background-image: url('../images/characteristics/ellipse-min.svg'),
-        url('../images/characteristics/ellipse-min.svg'),
-        url('../images/characteristics/characteristics-bg@2x.png'),
-        url('../images/characteristics/characteristics-bg-desktop@2x.png');
-      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-      background-position: -10px 132px, -330px 692px, -77px 145px, -652px 705px;
-      background-size: 979px auto, 979px auto, 1440px auto, 2053px auto;
-    }
-  }
-  @include mq(desktop) {
-    background-image: url('../images/characteristics/ellipse-min.svg'),
-      url('../images/characteristics/characteristics-bg-desktop.png');
-    background-repeat: no-repeat, no-repeat;
-    background-position: 50%, 0px 145px;
-    background-size: auto auto, 2053px auto;
-    @include mq(retina) {
-      background-image: url('../images/characteristics/ellipse-min.svg'),
-        url('../images/characteristics/characteristics-bg-desktop@2x.png');
-      background-repeat: no-repeat, no-repeat;
-      background-position: 50%, 0px 145px;
-      background-size: auto auto, 2053px auto;
-    }
-  }
 
   &__container {
     @include mq(tablet) {
@@ -400,5 +360,113 @@
   &__text {
     font-size: 16px;
     line-height: 1.5;
+  }
+}
+
+.webp .characteristics {
+  @include mq(mobile) {
+    background-image: url('../images/characteristics/mobile/elipse-right-top-mobile.svg'),
+      url('../images/characteristics/mobile/elipse-left-bottom-mobile.svg'),
+      url('../images/characteristics/mobile/bg-mobile.webp');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 200px 423px, -125px 567px, -282px 631px;
+    background-size: 345px 483px, 345px 483px, 1070px 314px;
+
+    @include mq(retina) {
+      background-image: url('../images/characteristics/mobile/elipse-right-top-mobile.svg'),
+        url('../images/characteristics/mobile/elipse-left-bottom-mobile.svg'),
+        url('../images/characteristics/mobile/bg-mobile@2x.webp');
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: 200px 423px, -125px 567px, -282px 631px;
+      background-size: 345px 483px, 345px 483px, 1070px 314px;
+    }
+  }
+  @include mq(tablet) {
+    background-image: url('../images/characteristics/ellipse-min.svg'),
+      url('../images/characteristics/ellipse-min.svg'),
+      url('../images/characteristics/characteristics-bg.webp'),
+      url('../images/characteristics/characteristics-bg-desktop2.webp');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: -10px 132px, -330px 692px, 0px 145px, -600px 705px;
+    background-size: 979px auto, 979px auto, 1440px auto, 2050px auto;
+
+    @include mq(retina) {
+      background-image: url('../images/characteristics/ellipse-min.svg'),
+        url('../images/characteristics/ellipse-min.svg'),
+        url('../images/characteristics/characteristics-bg@2x.webp'),
+        url('../images/characteristics/characteristics-bg-desktop2@2x.webp');
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+      background-position: -10px 132px, -330px 692px, 0px 145px, -600px 705px;
+      background-size: 979px auto, 979px auto, 1440px auto, 2050px auto;
+    }
+  }
+  @include mq(desktop) {
+    background-image: url('../images/characteristics/ellipse-min.svg'),
+      url('../images/characteristics/characteristics-bg-desktop2.webp');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50%, 50% 145px;
+    background-size: 1379px 771px, 2050px auto;
+
+    @include mq(retina) {
+      background-image: url('../images/characteristics/ellipse-min.svg'),
+        url('../images/characteristics/characteristics-bg-desktop2@2x.webp');
+      background-repeat: no-repeat, no-repeat;
+      background-position: 50%, 50% 145px;
+      background-size: auto auto, 2050px auto;
+    }
+  }
+}
+
+.no-webp .characteristics {
+  @include mq(mobile) {
+    background-image: url('../images/characteristics/mobile/elipse-right-top-mobile.svg'),
+      url('../images/characteristics/mobile/elipse-left-bottom-mobile.svg'),
+      url('../images/characteristics/mobile/bg-mobile.png');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 200px 423px, -125px 567px, -282px 631px;
+    background-size: 345px 483px, 345px 483px, 1070px 314px;
+
+    @include mq(retina) {
+      background-image: url('../images/characteristics/mobile/elipse-right-top-mobile.svg'),
+        url('../images/characteristics/mobile/elipse-left-bottom-mobile.svg'),
+        url('../images/characteristics/mobile/bg-mobile@2x.png');
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: 200px 423px, -125px 567px, -282px 631px;
+      background-size: 345px 483px, 345px 483px, 1070px 314px;
+    }
+  }
+  @include mq(tablet) {
+    background-image: url('../images/characteristics/ellipse-min.svg'),
+      url('../images/characteristics/ellipse-min.svg'),
+      url('../images/characteristics/characteristics-bg.png'),
+      url('../images/characteristics/characteristics-bg-desktop2.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: -10px 132px, -330px 692px, 0px 145px, -600px 705px;
+    background-size: 979px auto, 979px auto, 1440px auto, 2050px auto;
+
+    @include mq(retina) {
+      background-image: url('../images/characteristics/ellipse-min.svg'),
+        url('../images/characteristics/ellipse-min.svg'),
+        url('../images/characteristics/characteristics-bg@2x.png'),
+        url('../images/characteristics/characteristics-bg-desktop2@2x.png');
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+      background-position: -10px 132px, -330px 692px, 0px 145px, -600px 705px;
+      background-size: 979px auto, 979px auto, 1440px auto, 2050px auto;
+    }
+  }
+  @include mq(desktop) {
+    background-image: url('../images/characteristics/ellipse-min.svg'),
+      url('../images/characteristics/characteristics-bg-desktop2.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50%, 50% 145px;
+    background-size: auto auto, 2050px auto;
+
+    @include mq(retina) {
+      background-image: url('../images/characteristics/ellipse-min.svg'),
+        url('../images/characteristics/characteristics-bg-desktop2@2x.png');
+      background-repeat: no-repeat, no-repeat;
+      background-position: 50%, 50% 145px;
+      background-size: auto auto, 2050px auto;
+    }
   }
 }

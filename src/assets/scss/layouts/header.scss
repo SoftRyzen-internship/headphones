@@ -14,6 +14,9 @@
   @include mq(tablet) {
     padding: 12px 0;
   }
+  &__logo {
+    display: flex;
+  }
 }
 
 .mobile-menu-btn {
@@ -26,13 +29,28 @@
 }
 
 .icon-logo-header {
+  display: flex;
+  align-items: center;
   font-size: 32px;
-  margin-right: 8px;
-  @include mq(tablet-only) {
+  @include mq(tablet) {
     font-size: 48px;
-    margin-right: 12px;
   }
-  @include mq(desktop) {
-    margin-right: 12px;
+}
+
+.logo {
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: var(--title-font);
+    font-size: 16px;
+    line-height: 1.25;
+    margin-left: 8px;
+    @include mq(tablet) {
+      font-size: 20px;
+      margin-left: 12px;
+    }
   }
 }

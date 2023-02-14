@@ -385,34 +385,34 @@
     background-image: url('../images/characteristics/ellipse-min.svg'),
       url('../images/characteristics/ellipse-min.svg'),
       url('../images/characteristics/characteristics-bg.webp'),
-      url('../images/characteristics/characteristics-bg-desktop.webp');
+      url('../images/characteristics/characteristics-bg-desktop2.webp');
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-position: -10px 132px, -330px 692px, -77px 145px, -652px 705px;
-    background-size: 979px auto, 979px auto, 1440px auto, 2053px auto;
+    background-position: -10px 132px, -330px 692px, 0px 145px, -600px 705px;
+    background-size: 979px auto, 979px auto, 1440px auto, 2050px auto;
 
     @include mq(retina) {
       background-image: url('../images/characteristics/ellipse-min.svg'),
         url('../images/characteristics/ellipse-min.svg'),
         url('../images/characteristics/characteristics-bg@2x.webp'),
-        url('../images/characteristics/characteristics-bg-desktop@2x.webp');
+        url('../images/characteristics/characteristics-bg-desktop2@2x.webp');
       background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-      background-position: -10px 132px, -330px 692px, -77px 145px, -652px 705px;
-      background-size: 979px auto, 979px auto, 1440px auto, 2053px auto;
+      background-position: -10px 132px, -330px 692px, 0px 145px, -600px 705px;
+      background-size: 979px auto, 979px auto, 1440px auto, 2050px auto;
     }
   }
   @include mq(desktop) {
     background-image: url('../images/characteristics/ellipse-min.svg'),
-      url('../images/characteristics/characteristics-bg-desktop.webp');
+      url('../images/characteristics/characteristics-bg-desktop2.webp');
     background-repeat: no-repeat, no-repeat;
-    background-position: 50%, 0px 145px;
-    background-size: auto auto, 2053px auto;
+    background-position: 50%, 50% 145px;
+    background-size: 1379px 771px, 2050px auto;
 
     @include mq(retina) {
       background-image: url('../images/characteristics/ellipse-min.svg'),
-        url('../images/characteristics/characteristics-bg-desktop@2x.webp');
+        url('../images/characteristics/characteristics-bg-desktop2@2x.webp');
       background-repeat: no-repeat, no-repeat;
-      background-position: 50%, 0px 145px;
-      background-size: auto auto, 2053px auto;
+      background-position: 50%, 50% 145px;
+      background-size: auto auto, 2050px auto;
     }
   }
 }
@@ -439,34 +439,34 @@
     background-image: url('../images/characteristics/ellipse-min.svg'),
       url('../images/characteristics/ellipse-min.svg'),
       url('../images/characteristics/characteristics-bg.png'),
-      url('../images/characteristics/characteristics-bg-desktop.png');
+      url('../images/characteristics/characteristics-bg-desktop2.png');
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-position: -10px 132px, -330px 692px, -77px 145px, -652px 705px;
-    background-size: 979px auto, 979px auto, 1440px auto, 2053px auto;
+    background-position: -10px 132px, -330px 692px, 0px 145px, -600px 705px;
+    background-size: 979px auto, 979px auto, 1440px auto, 2050px auto;
 
     @include mq(retina) {
       background-image: url('../images/characteristics/ellipse-min.svg'),
         url('../images/characteristics/ellipse-min.svg'),
         url('../images/characteristics/characteristics-bg@2x.png'),
-        url('../images/characteristics/characteristics-bg-desktop@2x.png');
+        url('../images/characteristics/characteristics-bg-desktop2@2x.png');
       background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-      background-position: -10px 132px, -330px 692px, -77px 145px, -652px 705px;
-      background-size: 979px auto, 979px auto, 1440px auto, 2053px auto;
+      background-position: -10px 132px, -330px 692px, 0px 145px, -600px 705px;
+      background-size: 979px auto, 979px auto, 1440px auto, 2050px auto;
     }
   }
   @include mq(desktop) {
     background-image: url('../images/characteristics/ellipse-min.svg'),
-      url('../images/characteristics/characteristics-bg-desktop.png');
+      url('../images/characteristics/characteristics-bg-desktop2.png');
     background-repeat: no-repeat, no-repeat;
-    background-position: 50%, 0px 145px;
-    background-size: auto auto, 2053px auto;
+    background-position: 50%, 50% 145px;
+    background-size: auto auto, 2050px auto;
 
     @include mq(retina) {
       background-image: url('../images/characteristics/ellipse-min.svg'),
-        url('../images/characteristics/characteristics-bg-desktop@2x.png');
+        url('../images/characteristics/characteristics-bg-desktop2@2x.png');
       background-repeat: no-repeat, no-repeat;
-      background-position: 50%, 0px 145px;
-      background-size: auto auto, 2053px auto;
+      background-position: 50%, 50% 145px;
+      background-size: auto auto, 2050px auto;
     }
   }
 }

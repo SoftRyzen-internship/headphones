@@ -1,0 +1,29 @@
+.popup-social {
+  top: 30%;
+
+  @include mq(tablet) {
+    top: 40%;
+  }
+  @include mq(desktop) {
+    top: 30%;
+  }
+  &__container {
+    @include mq(tablet) {
+      padding: 48px 50px;
+    }
+    @include mq(mobile-only) {
+      padding: 50px 20px;
+    }
+  }
+
+  &__text {
+    font-size: 32px;
+    font-family: ProstoOne;
+    text-align: center;
+    line-height: 1.25;
+    @include mq(mobile-only) {
+      font-size: 20px;
+      line-height: 1.23;
+    }
+  }
+}

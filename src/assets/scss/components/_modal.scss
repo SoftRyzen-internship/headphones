@@ -26,7 +26,7 @@
   transform: translate(-50%, -50%) scale(1);
   width: 100%;
   max-width: 272px;
-  min-height: 375px;
+  // min-height: 375px;
 
   background-color: var(--translucent-bg);
   box-shadow: var(--primary-shadow);
@@ -36,7 +36,7 @@
 
   @include mq(tablet) {
     max-width: 471px;
-    min-height: 434px;
+    // min-height: 434px;
   }
 
   .is-hidden & {
@@ -51,23 +51,21 @@
   padding: 52px 20px 32px 20px;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     inset: 0;
     border-radius: 30px;
     padding: 1px;
     z-index: -1;
     background: var(--normal-gradient-bg);
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    }
+  }
 
-    @include mq(tablet) {
-      padding: 48px 52px 44px 52px;
-    }
+  @include mq(tablet) {
+    padding: 48px 52px 44px 52px;
+  }
 }
 
 .btn-close {
@@ -105,7 +103,7 @@
 
   @include mq(tablet) {
     width: 367px;
-    }
+  }
 }
 
 .modal__title {
@@ -123,7 +121,7 @@
   font-size: 16px;
   line-height: 1.25;
   color: var(--primary-txt-cl);
-  
+
   border: 1px solid var(--primary-txt-cl);
   border-radius: 30px;
   background-color: transparent;
@@ -147,7 +145,7 @@
   @include mq(tablet) {
     top: 16px;
     right: 24px;
-    }
+  }
 }
 
 // FORM VALIDATION
@@ -160,11 +158,11 @@
   display: block;
   width: 232px;
   padding-left: 25px;
-  color: #DC2626;
+  color: #dc2626;
 
   @include mq(tablet) {
-      width: 367px;
-    }
+    width: 367px;
+  }
 }
 
 .form-control.success input {
@@ -172,5 +170,5 @@
 }
 
 .form-control.error input {
-  border-color: #DC2626;
+  border-color: #dc2626;
 }

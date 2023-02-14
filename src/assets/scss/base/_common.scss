@@ -108,9 +108,9 @@ button {
 }
 
 .link-style {
-  transition: all var(--fast) ease-in-out;
   &:hover,
   &:focus {
+    transition: all var(--fast) ease-in-out;
     /* Create the gradient. */
     background-image: var(--normal-gradient-bg);
     /* Set the background size and repeat properties. */
@@ -129,6 +129,6 @@ button {
   }
 }
 
-.nav-link{
+.nav-link {
   text-decoration: none;
 }

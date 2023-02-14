@@ -1,0 +1,31 @@
+.popup {
+  top: 30%;
+  min-height: 166px;
+
+  @include mq(tablet) {
+    top: 40%;
+    min-height: 192px;
+  }
+  @include mq(desktop) {
+    top: 30%;
+  }
+}
+
+.popup-container {
+  @include mq(tablet) {
+    padding: 48px 0px 32px 0px;
+  }
+}
+
+.popup-title {
+  margin-bottom: 24px;
+  width: 100%;
+  background: var(--normal-gradient-bg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include mq(tablet) {
+    margin-bottom: 32px;
+  }
+}
+

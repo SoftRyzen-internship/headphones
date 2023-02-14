@@ -14,7 +14,6 @@ $(document).ready(function () {
 
   openModalBtn.forEach(function (btn) {
     btn.addEventListener('click', e => {
-      console.log('click on modal');
       e.preventDefault();
 
       //remove values in form

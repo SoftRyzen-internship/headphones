@@ -37,8 +37,6 @@ form.addEventListener('input', e => {
     }
   }
 
-  console.log('isValidValues', isValidValues);
-
   // REMOVE DISABLED BUTTON
   if (isValidValues.name === true && isValidValues.phone === true) {
     sendBtn.removeAttribute('disabled');
@@ -89,8 +87,6 @@ const checkInputPhone = phoneInput => {
   let isValidPhone = false;
   // Get values from the inputs
   const phoneValue = phoneInput.trim();
-
-  console.log(phoneValue.length);
 
   // VALIDATION PHONE
   const re = /^[0-9+-]+$/;

@@ -3,11 +3,14 @@
   opacity: 1;
   top: 30%;
   min-height: 166px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s linear 0.2s;
 
   &.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    transform: translate(-50%, 100%) scale(0);
   }
 
   @include mq(tablet) {

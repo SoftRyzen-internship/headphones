@@ -5,7 +5,9 @@
 }
 
 .header {
+  position: relative;
   padding: 20px 0;
+  z-index: 100;
 
   box-shadow: var(--primary-shadow);
 
@@ -20,5 +22,17 @@
 
   @include mq(tablet) {
     display: none;
+  }
+}
+
+.icon-logo-header {
+  font-size: 32px;
+  margin-right: 8px;
+  @include mq(tablet-only) {
+    font-size: 48px;
+    margin-right: 12px;
+  }
+  @include mq(desktop) {
+    margin-right: 12px;
   }
 }

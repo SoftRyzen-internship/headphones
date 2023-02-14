@@ -61,6 +61,7 @@
       border-radius: 50%;
       filter: blur(44px);
       background: linear-gradient(90deg, #0077aa 17.5%, #ff4488 100%);
+
       @include mq(tablet) {
         top: 60px;
         left: 60px;

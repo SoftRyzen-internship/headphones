@@ -1,17 +1,18 @@
 <header class="header">
   <div class="container header__container">
-    <a class="logo link" href="./" aria-label="logo">
+    <a class="link link-style" href="#" aria-label="logo">
       <div class="logo__container">
-        <svg class="logo__svg">
-          <use class="logo__icon" href="../../assets/images/sprite.svg#icon-logo" />
-        </svg>
+        <!-- <svg class="logo__svg">
+          <use class="logo__icon" href="./assets/images/sprite.svg#icon-logo" />
+        </svg> -->
+        <i class="icon-logo-header"></i>
         <p class="logo__title">Dream Beats</p>
       </div>
     </a>
     {% include 'components/nav-menu.html' %}
     <button type="button" class="mobile-menu-btn" data-menu-btn aria-label="open mobile menu">
       <svg class="mobile-menu-svg" width="20" height="20">
-        <use href="../../assets/images/sprite.svg#icon-burger" />
+        <use href="./assets/images/sprite.svg#icon-burger" />
       </svg>
     </button>
   </div>

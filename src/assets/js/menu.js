@@ -3,7 +3,7 @@
   const mobileMenu = document.querySelector('[data-menu]');
   const btnMenuClose = document.querySelector('[data-menu-close-btn]');
   const body = document.querySelector('body');
-  const menuLink = document.querySelectorAll('.nav-link');
+  const menuLink = document.querySelectorAll('.mobile-menu .nav-link');
 
   openMenuBtn.addEventListener('click', () => {
     toggleMenu();

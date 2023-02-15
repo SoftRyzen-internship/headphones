@@ -4,6 +4,8 @@ const sendBtn = document.querySelector('.send__btn');
 const username = document.getElementById('name');
 const phone = document.getElementById('telephone');
 
+const modal = document.querySelector('[data-modal]');
+
 // SET DISABLED BUTTON
 sendBtn.setAttribute('disabled', 'disabled');
 
@@ -11,6 +13,17 @@ const isValidValues = {
   name: false,
   phone: false,
 };
+
+// SET DISABLED BUTTON
+modal.addEventListener('click', () => {
+  sendBtn.setAttribute('disabled', 'disabled');
+});
+
+// скидаємо значення isValidValues
+sendBtn.addEventListener('click', () => {
+  isValidValues.name = false;
+  isValidValues.phone = false;
+});
 
 form.addEventListener('input', e => {
   if (e.target.id === 'name') {

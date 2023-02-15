@@ -20,6 +20,8 @@
 }
 
 .modal {
+  visibility: visible;
+  opacity: 1;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,6 +35,12 @@
   border-radius: 30px;
 
   transition: transform 0.3s linear 0.2s;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
 
   @include mq(tablet) {
     max-width: 471px;
@@ -58,7 +66,9 @@
     padding: 1px;
     z-index: -1;
     background: var(--normal-gradient-bg);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask:
+      linear-gradient(#fff 0 0, #fff) content-box,
+      linear-gradient(#fff 0 0, #fff);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
   }

@@ -100,7 +100,14 @@
     @include mq(desktop) {
       margin-right: 84px;
     }
-
+    & .buy__image {
+      width: 208px;
+      height: 208px;
+      @include mq(tablet) {
+        width: 420px;
+        height: 420px;
+      }
+    }
     & .slick-prev,
     & .slick-next {
       position: absolute;
@@ -153,19 +160,15 @@
   &__color-list-item {
     border-radius: 6px;
     &:nth-child(1) {
-      color: var(--blue-hp);
       background-color: var(--blue-hp);
     }
     &:nth-child(2) {
-      color: var(--purple-hp);
       background-color: var(--purple-hp);
     }
     &:nth-child(3) {
-      color: var(--black-hp);
       background-color: var(--black-hp);
     }
     &:nth-child(4) {
-      color: var(--violet-hp);
       background-color: var(--violet-hp);
     }
     &:not(:last-child) {
@@ -177,6 +180,20 @@
     display: block;
     width: 12px;
     height: 12px;
+    border-radius: 6px;
+
+    &[data-color='blue'] {
+      color: var(--blue-hp);
+    }
+    &[data-color='purple'] {
+      color: var(--purple-hp);
+    }
+    &[data-color='black'] {
+      color: var(--black-hp);
+    }
+    &[data-color='violet'] {
+      color: var(--violet-hp);
+    }
 
     &.current {
       &:before {
@@ -228,6 +245,14 @@
       }
       &.slick-current {
         border: none;
+        background: var(--primary-bg);
+        background-clip: padding-box;
+        border: 1px solid transparent;
+        border-radius: 7px;
+        @include mq(tablet) {
+          border-radius: 12px;
+        }
+
         &:before {
           content: '';
           position: absolute;
@@ -235,15 +260,18 @@
           left: 0;
           right: 0;
           bottom: 0;
-          border-radius: 7px;
-          border: 1px solid transparent;
-          background: linear-gradient(90deg, #0077aa 17.5%, #ff4488 100%) border-box;
-          -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-          -webkit-mask-composite: destination-out;
-          mask-composite: exclude;
-          @include mq(tablet) {
-            border-radius: 12px;
-          }
+          z-index: -1;
+          margin: -1px;
+          border-radius: inherit;
+          background: linear-gradient(90deg, #0077aa 17.5%, #ff4488 100%);
+        }
+      }
+      & .buy__image {
+        width: 60px;
+        height: 60px;
+        @include mq(tablet) {
+          width: 124px;
+          height: 124px;
         }
       }
     }

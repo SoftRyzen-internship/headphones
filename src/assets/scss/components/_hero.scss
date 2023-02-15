@@ -1,5 +1,4 @@
 // hero
-
 .hero {
   padding: 24px 0 40px;
 
@@ -34,11 +33,6 @@
 
   &__img {
     margin: auto;
-
-    @media (width < 768px) {
-      width: 244px;
-      height: 220px;
-    }
   }
 
   &__subtitle {
@@ -70,10 +64,6 @@
   &__btn {
     margin-left: auto;
     margin-right: auto;
-
-    @media (width < 768px) {
-      margin-bottom: 20px;
-    }
   }
 
   &__subsubtitle {
@@ -87,8 +77,11 @@
     font-weight: 400;
 
     color: var(--main-font);
+  }
 
-    @media (width < 768px) {
+  @include mq(mobile-only) {
+    &__subsubtitle {
+      margin-top: 20px;
       width: 165px;
     }
   }
@@ -129,11 +122,16 @@
   @include mq(desktop) {
     padding: 40px 0 100px;
 
+    &__desktop-wrapper {
+      margin-top: 181px;
+    }
+
     &__title {
-      display: none;
-      margin-top: 70px;
-      margin-bottom: 34px;
-      margin-left: -13px;
+      margin: 0;
+
+      position: absolute;
+      left: 112px;
+      top: 68px;
     }
 
     &__img {

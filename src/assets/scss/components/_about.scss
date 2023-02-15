@@ -5,7 +5,6 @@
   background: var(--translucent-bg);
   box-shadow: var(--primary-shadow);
   border-radius: 16px;
-  // border: 1px solid red;
 
   @include mq(tablet) {
   padding-top: 40px;
@@ -41,7 +40,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // border: 1px solid rgb(0, 181, 253);
 
   @include mq(tablet) {
     margin-top: 40px;
@@ -51,7 +49,6 @@
 .about__icon {
   width: 140px;
   height: 140px;
-  // border: 1px solid rgb(84, 247, 125);
 }
 
 .about__text__wrapper {
@@ -101,7 +98,6 @@
 // SECTION ARTICLES
 .about__articles {
   margin-top: 80px;
-  // border: 1px solid yellow;
 
   @include mq(desktop) {
     margin-top: 100px;
@@ -149,7 +145,6 @@
   box-shadow: var(--primary-shadow);
   border-radius: 16px;
   overflow: hidden;
-  // border: 1px solid yellow;
 
   @include mq(desktop) {
     position: relative;
@@ -188,7 +183,6 @@
 
 .about__articles__thumb {
   padding: 20px 20px 32px 20px;
-  // border: 1px solid rgb(4, 255, 180);
 
   @include mq(tablet) {
     padding: 40px 43px 60px 43px;
@@ -207,14 +201,13 @@
 
 .about__articles__thumb-left {
   @include mq(desktop) {
-      position: absolute;
-      top: 50%;
-      left: 40px;
-      transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
 
-      width: 448px;
-      padding: 0;
-      // border: 1px solid rgb(224, 26, 178);
+    width: 448px;
+    padding: 0;
   }
 }
 
@@ -230,8 +223,6 @@
   justify-content: center;
   width: 100%;
   height: 236px;
-  // border: 1px solid rgb(230, 27, 172);
-
 
   @include mq(tablet) {
     height: 588px;
@@ -246,12 +237,10 @@
   display: none;
 
   @include mq(desktop) {
-    // border: 1px solid rgb(112, 230, 27);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    // width: 728px;
     height: 548px;
   }
 }
@@ -262,16 +251,6 @@
   @include mq(desktop) {
     display: flex;
     justify-content: flex-start;
-  }
-}
-
-.about__image {
-  // border: 1px solid red;
-  @include mq(desktop) {
-    // border: 1px solid red;
-    // width: 100%;
-    // height: 100%;
-    // object-fit: cover;
   }
 }
 

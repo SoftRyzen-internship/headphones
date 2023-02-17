@@ -13,6 +13,7 @@ $(document).ready(function () {
       e.preventDefault();
 
       modalWindow.classList.toggle('is-hidden');
+      body.classList.add('scroll-hidden')
 
       togglePopup();
     });
@@ -20,7 +21,6 @@ $(document).ready(function () {
 
   function togglePopup() {
     popup.classList.toggle('is-hidden');
-    body.classList.toggle('scroll-hidden');
   }
 
   function closePopup() {
@@ -28,5 +28,8 @@ $(document).ready(function () {
     modal.classList.add('is-hidden');
   }
 
-  closePopupBtn.addEventListener('click', closePopup);
+  closePopupBtn.addEventListener('click', () => {
+    closePopup()
+    body.classList.remove('scroll-hidden')
+  });
 });

@@ -39,7 +39,6 @@ $(document).ready(function () {
 
   function togglePopup() {
     popup.classList.toggle('is-hidden');
-    body.classList.toggle('scroll-hidden');
   }
 
   function handleKey(e) {
@@ -61,6 +60,7 @@ $(document).ready(function () {
       if (e.key === 'Escape') {
         modal.classList.add('is-hidden');
         togglePopup();
+        body.classList.remove('scroll-hidden')
       }
     }
     return;
@@ -74,6 +74,7 @@ $(document).ready(function () {
     if (e.target === e.currentTarget && !popup.classList.contains('is-hidden')) {
       modal.classList.add('is-hidden');
       togglePopup();
+      body.classList.remove('scroll-hidden')
     }
     return;
   }

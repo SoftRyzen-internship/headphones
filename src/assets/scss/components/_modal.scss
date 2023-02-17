@@ -108,6 +108,10 @@
   }
 }
 
+.send__btn:disabled{
+  opacity: 0.3;
+}
+
 .modal-content {
   width: 232px;
 

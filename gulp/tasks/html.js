@@ -21,14 +21,9 @@ const manageEnvironment = function (environment) {
   });
 };
 
-const getDataForFile = file => {
-  return require('../../src/json/data.json');
-};
-
 const html = () => {
   return gulp
     .src(paths.src.html)
-    .pipe(data(getDataForFile))
     .pipe(
       nunjucksRender({
         path: ['src/html/partials'],

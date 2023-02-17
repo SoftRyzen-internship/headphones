@@ -4,7 +4,7 @@ const sendBtn = document.querySelector('.send__btn');
 const username = document.getElementById('name');
 const phone = document.getElementById('telephone');
 
-const modal = document.querySelector('[data-modal]');
+const openModalBtn = document.querySelector('#buy-button');
 
 // SET DISABLED BUTTON
 sendBtn.setAttribute('disabled', 'disabled');
@@ -15,7 +15,7 @@ const isValidValues = {
 };
 
 // SET DISABLED BUTTON
-modal.addEventListener('click', () => {
+openModalBtn.addEventListener('click', () => {
   sendBtn.setAttribute('disabled', 'disabled');
 });
 
@@ -75,6 +75,7 @@ const checkInputName = name => {
   // VALIDATION NAME
   const nameRe = /^[a-zA-Z-]+$/;
   if (!usernameValue) {
+    console.log('error')
     //Show error
     //Add error class
     setErrorFor(username, 'Error(field is required)');

@@ -8,6 +8,12 @@
   color: var(--btn-txt-cl);
   background-image: var(--normal-gradient-bg);
   transition: background-image var(--fast) linear;
+  width: 100%;
+  text-align: center;
+
+  @include mq(tablet) {
+    max-width: 232px;
+  }
 
   &:hover,
   &:focus {

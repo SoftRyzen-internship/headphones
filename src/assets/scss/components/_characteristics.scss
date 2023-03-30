@@ -351,22 +351,20 @@
 }
 
 .webp .characteristics {
-  @include mq(mobile) {
+  background-image: url('../images/characteristics/mobile/elipse-right-top-mobile.svg'),
+    url('../images/characteristics/mobile/elipse-left-bottom-mobile.svg'),
+    url('../images/characteristics/mobile/bg-mobile.webp');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 200px 423px, -125px 567px, -282px 631px;
+  background-size: 345px 483px, 345px 483px, 1070px 314px;
+
+  @include mq(retina) {
     background-image: url('../images/characteristics/mobile/elipse-right-top-mobile.svg'),
       url('../images/characteristics/mobile/elipse-left-bottom-mobile.svg'),
-      url('../images/characteristics/mobile/bg-mobile.webp');
+      url('../images/characteristics/mobile/bg-mobile@2x.webp');
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: 200px 423px, -125px 567px, -282px 631px;
     background-size: 345px 483px, 345px 483px, 1070px 314px;
-
-    @include mq(retina) {
-      background-image: url('../images/characteristics/mobile/elipse-right-top-mobile.svg'),
-        url('../images/characteristics/mobile/elipse-left-bottom-mobile.svg'),
-        url('../images/characteristics/mobile/bg-mobile@2x.webp');
-      background-repeat: no-repeat, no-repeat, no-repeat;
-      background-position: 200px 423px, -125px 567px, -282px 631px;
-      background-size: 345px 483px, 345px 483px, 1070px 314px;
-    }
   }
   @include mq(tablet) {
     background-image: url('../images/characteristics/ellipse-min.svg'),
@@ -405,22 +403,20 @@
 }
 
 .no-webp .characteristics {
-  @include mq(mobile) {
+  background-image: url('../images/characteristics/mobile/elipse-right-top-mobile.svg'),
+    url('../images/characteristics/mobile/elipse-left-bottom-mobile.svg'),
+    url('../images/characteristics/mobile/bg-mobile.png');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 200px 423px, -125px 567px, -282px 631px;
+  background-size: 345px 483px, 345px 483px, 1070px 314px;
+
+  @include mq(retina) {
     background-image: url('../images/characteristics/mobile/elipse-right-top-mobile.svg'),
       url('../images/characteristics/mobile/elipse-left-bottom-mobile.svg'),
-      url('../images/characteristics/mobile/bg-mobile.png');
+      url('../images/characteristics/mobile/bg-mobile@2x.png');
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: 200px 423px, -125px 567px, -282px 631px;
     background-size: 345px 483px, 345px 483px, 1070px 314px;
-
-    @include mq(retina) {
-      background-image: url('../images/characteristics/mobile/elipse-right-top-mobile.svg'),
-        url('../images/characteristics/mobile/elipse-left-bottom-mobile.svg'),
-        url('../images/characteristics/mobile/bg-mobile@2x.png');
-      background-repeat: no-repeat, no-repeat, no-repeat;
-      background-position: 200px 423px, -125px 567px, -282px 631px;
-      background-size: 345px 483px, 345px 483px, 1070px 314px;
-    }
   }
   @include mq(tablet) {
     background-image: url('../images/characteristics/ellipse-min.svg'),

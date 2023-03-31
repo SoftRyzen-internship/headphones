@@ -1,4 +1,4 @@
-.products-wrapper{
+.products-wrapper {
   position: relative;
 
   box-shadow: 0px -3px 44px rgba(0, 0, 0, 0.25);
@@ -13,19 +13,19 @@
   }
 }
 
-.desktop-tablet{
+.desktop-tablet {
   @include mq(mobile-only) {
     display: none;
   }
 }
 
-.mobile{
+.mobile {
   @include mq(tablet) {
     display: none;
   }
 }
 
-.products{
+.products {
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -64,11 +64,14 @@
   text-transform: capitalize;
 }
 
-.products__image-wrapper{
+.products__image-wrapper {
   @include mq(mobile-only) {
-    width: 272px;
+    width: 85vw;
     height: 310px;
     margin-bottom: 32px;
+  }
+  @include mq(mobile) {
+    width: 430px;
   }
 
   @include mq(tablet) {
@@ -94,38 +97,42 @@
   }
 }
 
-.image-wrapper--black::after{
+.image-wrapper--black::after {
   background-color: var(--grey-bg);
 }
 
-.image-wrapper--violet::after{
+.image-wrapper--violet::after {
   background-color: var(--violet-bg);
 }
 
-.image-wrapper--purple::after{
+.image-wrapper--purple::after {
   background-color: var(--purple-bg);
 }
 
-.image-wrapper--blue::after{
+.image-wrapper--blue::after {
   background-color: var(--blue-bg);
 }
 
-.products__image{
+.products__image {
   margin: auto;
   position: relative;
   z-index: 100;
 }
 
-.products__meta{
+.products__meta {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
-
   font-size: 20px;
-
   @include mq(mobile-only) {
-    width: 272px;
+    width: 85vw;
+  }
+  @include mq(mobile) {
+    width: 430px;
+  }
+  @include mq(tablet) {
+    width: 100%;
   }
 }
 
@@ -137,25 +144,24 @@
   border-radius: 50%;
 }
 
-.products__item:nth-child(1) .products__meta::before{
+.products__item:nth-child(1) .products__meta::before {
   background-color: var(--black-hp);
 }
 
-.products__item:nth-child(2) .products__meta::before{
+.products__item:nth-child(2) .products__meta::before {
   background-color: var(--violet-hp);
 }
 
-.products__item:nth-child(3) .products__meta::before{
+.products__item:nth-child(3) .products__meta::before {
   background-color: var(--purple-hp);
 }
 
-.products__item:nth-child(4)>.products__meta::before{
+.products__item:nth-child(4) > .products__meta::before {
   background-color: var(--blue-hp);
 }
 
-.slick-carousel{
+.slick-carousel {
   @include mq(tablet) {
     display: none;
   }
 }
-

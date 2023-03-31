@@ -36,7 +36,6 @@
   }
   &__slick-container {
     position: relative;
-    width: 232px;
     margin-bottom: 32px;
     @include mq(tablet) {
       margin-left: auto;
@@ -135,7 +134,7 @@
       &:before {
         content: '';
         position: absolute;
-        right: -4px;
+        right: -10px;
         top: 9px;
         width: 24px;
         border-bottom: 1px solid var(--primary-txt-cl);
@@ -145,7 +144,7 @@
         content: '';
         position: absolute;
         bottom: 9px;
-        right: -4px;
+        right: -10px;
         width: 24px;
         border-bottom: 1px solid var(--primary-txt-cl);
         transform: rotate(-45deg);
@@ -213,11 +212,10 @@
     }
   }
   &__slider-nav {
+    margin: 0 auto;
     width: 188px;
     height: 60px;
     @include mq(tablet) {
-      margin-right: 0;
-      margin-left: 0;
       width: 388px;
       height: 124px;
     }
